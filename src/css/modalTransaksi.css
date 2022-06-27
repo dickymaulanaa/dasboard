@@ -1,0 +1,168 @@
+@font-face {
+	font-family: "Nunito600";
+	src: url("../font/NunitoSans_SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "Nunito200";
+	src: url("../font/NunitoSans_ExtraLight.ttf");
+}
+@font-face {
+	font-family: "Nunito400";
+	src: url("../font/NunitoSans_Regular.ttf");
+}
+@font-face {
+	font-family: "Nunito900";
+	src: url("../font/NunitoSans_Black.ttf");
+}
+@font-face {
+	font-family: "Nunito700";
+	src: url("../font/NunitoSans_Bold.ttf");
+}
+.modalBayar {
+	width: 60vw !important;
+	height: auto;
+	background-color: rgb(255, 255, 255);
+	border-radius: 20px;
+}
+.dialogModalTransaksi{
+	margin-left: 20vw !important;
+}
+.contentModalTransaksi {
+	border-radius: 20px;
+}
+
+.tr-modal-header {
+	border-bottom: none;
+	font-family: "Nunito700";
+	font-size: 36px !important;
+	font-weight: 700;
+	line-height: 49px;
+	letter-spacing: 0em;
+	color: #253863;
+}
+
+.isiModal {
+	width: 95%;
+	margin: 0 auto;
+}
+.title-modal {
+	font-family: "Nunito700";
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 26px;
+	letter-spacing: 0em;
+	color: #000000;
+}
+.tr-form-select {
+	background-image: none;
+}
+.form-image-tr {
+	width: 200px;
+}
+.form-control[readonly] {
+	background-color: #f5f8fa;
+	opacity: 1;
+	border: none;
+}
+.form-control[disabled] {
+	background-color: #e6e6e6;
+	opacity: 1;
+	border: none;
+}
+.btn-close {
+	width: 0.2em;
+	height: 0.2em;
+	margin-right: 20px !important;
+}
+.tr-label-trans {
+	font-family: "Nunito400";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: -0.006em;
+	color: #646464;
+}
+.tr-placeholder::placeholder {
+	font-family: "Nunito400";
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #909090;
+}
+.tr-placeholder {
+	font-family: "Nunito400";
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #909090;
+	height: 7vh;
+}
+.tr-img-form {
+	background-color: #f5f8fa;
+	margin-left: 0px;
+}
+.tr-img-form img {
+	width: 70px;
+}
+.tr-box-status-modal {
+	width: auto;
+	height: 7.14vh;
+}
+.tr-modal-dikirim {
+	color: #fafafc;
+	background-color: #f9b40a;
+	border-radius: 6px;
+	font-family: "Nunito600";
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+.tr-thead-modal {
+	background-color: #fbfbfb;
+	border-top: 1.5px solid #e0e0e0;
+	border-bottom: 2px solid #e0e0e0;
+}
+.tr-thead-modal th {
+	font-family: "Nunito400";
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: -0.006em;
+	color: #0a0a0a;
+     font-weight: normal;
+
+}
+
+.tr-tbody-modal img {
+	width: 3.5vw;
+	border-radius: 6px;
+}
+.tr-tbody-modal td {
+	font-family: "Nunito400";
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	color: #404040;
+	border-bottom: none;
+}
+.tr-label-total {
+	font-family: "Nunito700";
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 23px;
+	letter-spacing: 0.0015em;
+	color: #353535;
+}
+.tr-jml-total {
+	font-family: "Nunito700";
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 22px;
+	letter-spacing: 0em;
+	color: #40b03d;
+}

@@ -1,0 +1,128 @@
+@font-face {
+	font-family: "Nunito600";
+	src: url("../font/NunitoSans_SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "Nunito200";
+	src: url("../font/NunitoSans_ExtraLight.ttf");
+}
+@font-face {
+	font-family: "Nunito400";
+	src: url("../font/NunitoSans_Regular.ttf");
+}
+@font-face {
+	font-family: "Nunito900";
+	src: url("../font/NunitoSans_Black.ttf");
+}
+@font-face {
+	font-family: "Nunito700";
+	src: url("../font/NunitoSans_Bold.ttf");
+}
+
+.backModalNotif {
+	opacity: 1;
+	background-color: transparent;
+    width: auto;
+    
+}
+.dialogModal{
+    width: auto;
+    position: fixed;
+    height: auto;
+    margin-left:65% !important;
+    margin-top: 10vh !important;
+
+}
+.contentNotif {
+    width: auto;
+	border-radius: 6px !important;
+	border: none !important;
+  
+}
+
+.label-notif {
+	font-family: "Nunito700";
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: 0em;
+	color: #253863;
+	/* width: 47%; */
+}
+.label-tandai-notif {
+	/* width: 35%; */
+	font-family: "Nunito400";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0em;
+	color: #5b96f5;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.lebel-new-notif {
+	/* width: 17%; */
+}
+.jml-notif {
+    font-family: "Nunito400";
+    color: #ff0000;
+	line-height: 19px;
+	letter-spacing: 0em;
+	width: 7vw;
+	background-color: #ffcccc;
+	border-radius: 8px;
+}
+.isiModalNotif {
+	width: 100%;
+}
+.isi-notif {
+	width: 60%;
+	font-family: "Nunito400";
+	font-size: 15px;
+	line-height: 22px;
+	letter-spacing: 0em;
+	color: #858b97;
+}
+.tgl-notif {
+	height: 35%;
+	font-family: "Nunito400";
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 19px;
+	letter-spacing: 0em;
+	color: #858b97;
+}
+.btn-show-notif {
+    width: 90%;
+	font-family: "Nunito400";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: white;
+	background-color: #253863;
+    border: none;
+}
+.btn-show-notif:hover {
+	font-family: "Nunito400";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: white;
+	background-color: #253863;
+    border: none;
+}
+.btn-show-notif:focus {
+	font-family: "Nunito400";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: white;
+	background-color: #253863;
+    border: none;
+}

@@ -1,0 +1,150 @@
+@font-face {
+	font-family: "Nunito600";
+	src: url("../font/NunitoSans_SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "Nunito200";
+	src: url("../font/NunitoSans_ExtraLight.ttf");
+}
+@font-face {
+	font-family: "Nunito400";
+	src: url("../font/NunitoSans_Regular.ttf");
+}
+@font-face {
+	font-family: "Nunito900";
+	src: url("../font/NunitoSans_Black.ttf");
+}
+@font-face {
+	font-family: "Nunito700";
+	src: url("../font/NunitoSans_Bold.ttf");
+}
+
+.detail {
+	width: 81vw;
+	height: auto;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+.box-profile {
+	width: 78vw;
+	height: 24vh;
+	border-bottom: 2px solid #eff2f5;
+}
+.pict-buyer img {
+	width: 10vw;
+	height: 20vh;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+.box-profile-seller {
+	height: 20vh;
+	width: 80vw;
+}
+.buyerName {
+	font-family: "Nunito700";
+	color: #3f4254;
+	font-size: 19px;
+	font-weight: 700;
+	line-height: 26px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.buyerHint {
+	font-family: "Nunito600";
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #b5b5c3;
+}
+
+.btn-call-buyer {
+	background-color: #253863 !important;
+	height: 5vh !important;
+	width: 7vw !important;
+	border-radius: 6px !important;
+	font-family: "Nunito700" !important;
+	color: white !important;
+	font-size: 12px !important;
+	margin-left: auto;
+	margin-right: 0;
+	border: none !important;
+}
+
+.jml {
+	width: 150px;
+	height: 70px;
+	border-radius: 10px;
+	border: 1px dashed #e4e6ef;
+}
+
+.jml-hint {
+	color: #b5b5c3;
+	font-family: "Nunito400";
+	font-size: 14px;
+}
+
+.tab-profile {
+	width: 78vw;
+	height: auto;
+}
+.tab-ul {
+	margin-bottom: 30px !important;
+}
+
+/* Box Info */
+
+.box-info-buyer {
+	width: 81vw;
+	height: 120vh;
+	border-radius: 10px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+.label-info {
+	border-bottom: 1px solid #eff2f5;
+}
+
+.info {
+	height: auto;
+}
+
+/* FORM */
+
+.label-form {
+	font-family: "Nunito700";
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 20px;
+	letter-spacing: 0em;
+	color: #646464;
+}
+
+
+
+.statusDana {
+	font-family: "Nunito400";
+	font-size: 12px;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #5e6278;
+}
+
+.box-btn-ubah {
+	border-top: 1px solid #eff2f5;
+	height: 10vh;
+}
+.btn-ubah {
+	background-color: #00a3ff !important;
+	height: 5vh !important;
+	width: 7vw !important;
+	border-radius: 6px !important;
+	font-family: "Nunito700" !important;
+	color: white !important;
+	font-size: 12px !important;
+	border: none !important;
+}

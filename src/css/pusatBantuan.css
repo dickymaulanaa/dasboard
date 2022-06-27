@@ -1,0 +1,136 @@
+@font-face {
+	font-family: "Nunito600";
+	src: url("../font/NunitoSans_SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "Nunito200";
+	src: url("../font/NunitoSans_ExtraLight.ttf");
+}
+@font-face {
+	font-family: "Nunito400";
+	src: url("../font/NunitoSans_Regular.ttf");
+}
+@font-face {
+	font-family: "Nunito900";
+	src: url("../font/NunitoSans_Black.ttf");
+}
+@font-face {
+	font-family: "Nunito700";
+	src: url("../font/NunitoSans_Bold.ttf");
+}
+.breadcrumb-item + .breadcrumb-item::before {
+	content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='20' fill='none' viewBox='0 0 14 25'%3e%3cg id='Group'%3e%3cpath id='Vector' stroke='%23253863' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.25' d='M2 2L12.6875 12.6875L2 23.375'/%3e%3c/g%3e%3c/svg%3e");
+}
+
+.breadcumb-label {
+	font-family: "Nunito400";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+	letter-spacing: 0.0015em;
+	text-align: left;
+}
+
+.box-table-PusatBantuan {
+	width: 81vw;
+	height: auto;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+.labelPusat {
+	font-family: "Nunito600";
+	font-size: 25px;
+	line-height: 27px;
+	letter-spacing: 0em;
+	color: #253863;
+}
+
+.btn-list-pusatBantuan.active {
+	background-color: rgba(255, 255, 255, 0) !important;
+	color: #253863 !important;
+	border-bottom: 2px solid #253863 !important;
+	border-radius: 0px !important;
+}
+.btn-list-pusatBantuan {
+	color: #a1a5b7 !important;
+	font-family: "Nunito400";
+	font-size: 16px;
+	line-height: 25px;
+}
+
+.tbl-PusatBantuan {
+	width: 81vw;
+	height: auto;
+	/* border-bottom: 1px solid ; */
+}
+.table-head {
+	background-color: #fbfbfb;
+	border-bottom: 2px solid #e0e0e0;
+}
+.garisTbl {
+	width: 78vw;
+	height: 1px;
+	background-color: #bfbfdb;
+}
+
+.tbl-PusatBantuan th {
+	font-family: "Nunito400";
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.0075em;
+	font-weight: normal;
+}
+.tbl-PusatBantuan td {
+	font-family: "Nunito400";
+	color: #646464;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	padding: 12px !important;
+	border: none !important;
+}
+.box-info-bantuan-buyer {
+	width: 81vw;
+	height: auto;
+	border-radius: 10px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.box-btn-hubungiUser {
+	height: 10vh;
+}
+.btn-hubungiUser {
+	background-color: #253863 !important;
+	height: 6vh !important;
+	width: 11vw !important;
+	border-radius: 6px !important;
+	font-family: "Nunito600" !important;
+	color: white !important;
+	font-size: 14.5px !important;
+	border: none !important;
+	line-height: 20px;
+	letter-spacing: 0.0075em;
+}
+.pict-bantuan-seller img {
+	width: 10vw;
+	height: 20vh;
+	border-radius: 8px;
+	object-fit: cover;
+}
+.pict-bantuan-buyer img {
+	width: 10vw;
+	height: 20vh;
+	border-radius: 8px;
+	object-fit: cover;
+}
+.labelBlmSelesai{
+	color:#646464;
+font-family: "Nunito600";
+font-size: 15px;
+line-height: 23px;
+letter-spacing: 0.0015em;
+
+}

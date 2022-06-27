@@ -1,0 +1,79 @@
+.containerForm{
+    width: 420px;
+    height: 513px;
+    background-color: white;
+    border-radius: 16px;
+    margin-top: 6%;
+    margin-left: 32%;
+    padding: 50px;
+    
+
+    
+}
+body{
+    background-image: url('../image/Background.png');
+    background-color: #DEEAFD !important;
+    background-size: 80% 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo{
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.txt-login{
+    margin-top: 20px;
+    font-size: 25px;
+    color: #3E4094;
+    font-family: Nunito-bold;
+}
+.label{
+    font-size: 16px;
+    color: rgba(51, 51, 51, 0.96);
+    font-family: Nunito-bold;
+}
+.form2{
+    margin-top: 23px;
+    font-family: Nunito-semibold;
+    
+}
+.kotakForm{
+    height: 54px;
+}
+.btnSubmit{
+    border-radius: 8px;
+    margin-top: 48px;
+    width: 322px;
+    height: 54px;
+    background-color: #253863 !important;
+    margin-bottom: 56px;
+    font-family: Nunito-semibold;
+}
+::placeholder {
+    border-radius: 8px;
+    font-size: 16px;
+    color: #909090 !important;
+    margin: 10px;
+    font-family: Nunito-reguler;
+  }
+
+  @font-face {
+    font-family: "Nunito-bold";
+    src: url('../font/Nunito_Sans/NunitoSans-Bold.ttf');
+    }
+
+    @font-face {
+        font-family: "Nunito-semibold";
+        src: url('../font/Nunito_Sans/NunitoSans-SemiBold.ttf');
+        }
+
+        @font-face {
+            font-family: "Nunito-reguler";
+            src: url('../font/Nunito_Sans/NunitoSans-Regular.ttf');
+            }
+    
+
+

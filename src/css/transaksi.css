@@ -1,0 +1,76 @@
+@font-face {
+	font-family: "Nunito600";
+	src: url("../font/NunitoSans_SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "Nunito200";
+	src: url("../font/NunitoSans_ExtraLight.ttf");
+}
+@font-face {
+	font-family: "Nunito400";
+	src: url("../font/NunitoSans_Regular.ttf");
+}
+@font-face {
+	font-family: "Nunito900";
+	src: url("../font/NunitoSans_Black.ttf");
+}
+@font-face {
+	font-family: "Nunito700";
+	src: url("../font/NunitoSans_Bold.ttf");
+}
+
+.btn-list-transaksi.active {
+	background-color: rgba(255, 255, 255, 0) !important;
+	color: #253863 !important;
+	border-bottom: 2px solid #253863 !important;
+	border-radius: 0px !important;
+}
+.btn-list-transaksi {
+	color: #a1a5b7 !important;
+	font-family: "Nunito400";
+	font-size: 16px;
+	line-height: 22px;
+}
+.tr-invoice {
+	word-break: break-all !important;
+	width: 8vw !important;
+}
+
+.tr-img img {
+	width: 2.6vw;
+	border-radius: 6px;
+	margin-right: 5px;
+}
+.tr-table {
+	width: 81vw;
+	height: auto;
+	/* border-bottom: 1px solid ; */
+}
+
+.tr-table th {
+	font-family: "Nunito400";
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: -0.006em;
+}
+.tr-table td {
+	font-family: "Nunito400";
+	color: #404040;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	border: none !important;
+}
+.tr-btn-modal{
+	font-family: "Nunito400";
+	color: #404040;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	border: none !important;
+	background-color: rgba(255, 255, 255, 0);
+	text-decoration: underline;
+}

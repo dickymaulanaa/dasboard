@@ -1,0 +1,280 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+   
+  .body{
+    
+  }
+  
+  .bloc-tabs {
+    display: flex;
+  }
+  .tabs {
+  
+    padding: 15px;
+    text-align: center;
+    width: 50%;
+    background: #e6e6e6;
+    cursor: pointer;
+    box-sizing: content-box;
+    position: relative;
+    outline: none;
+  }
+  .tabs:not(:last-child){
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
+  }
+  
+  .active-tabs  {
+    background: #FFCF5b;
+    border-bottom: 1px solid transparent;
+  }
+
+  @font-face{
+    font-family: nunito;
+    src:url('../font/Nunito_Sans/NunitoSans-Regular.ttf');
+  }
+
+  @font-face{
+    font-family: nunito-bold;
+    src:url('../font/Nunito_Sans/NunitoSans-Bold.ttf');
+  }
+
+  /* @font-face{
+    font-family: nunito;
+    src:url('../font/Nunito_Sans/N');
+  } */
+  
+   
+  button {
+    border: none;
+    
+  }
+  .content-tabs {
+    flex-grow : 1;
+  }
+  .content {
+
+    display: none;
+  }
+  .content h2 {
+    padding: 0px 0 5px 0px;
+  }
+  .content hr {
+    width: 100px;
+    height: 2px;
+    background: #222;
+    margin-bottom: 5px;
+  }
+  .content p {
+    width: 100%;
+    height: 100%;
+  }
+  .active-content {
+    display: block;
+  }
+  .icon-warning{
+    margin-left: 25%;
+    width: 50%;
+
+  }
+  .txt-header{
+    text-align: center;
+  }
+  .modal-warning{
+    z-index: 3000 !important;
+    position: fixed;
+    margin-top: -600px;
+    margin-left: 30%;
+    width: 40%;
+  }
+  .kotak-nomor{
+    margin-left: 40%;
+  }
+  .txt-masukan{
+    margin-top: -6%;
+  }
+  .tabsss{
+    margin-left: 2%;
+    margin-top: 3%;
+    margin-bottom: 8%;
+  }
+  .txt-judul{
+    font-size: 14px;
+    color: #8F90A6!important;
+    width: 150px;
+    /* font-family: 'Nunito', sans-serif;   */
+    font-family: nunito;
+
+  }
+  .txt-on{
+    font-size: 14px;
+    color: #5979C0;
+    width: 150px;
+  }
+  .all-steps{
+    padding-left: 50px;
+  }
+  .daftarkan-txt{
+    /* font-family: 'Nunito', sans-serif; */
+    font-size: 36px;
+    font-family: nunito;
+  }
+  .pastikan-txt{
+    /* font-family: 'Nunito', sans-serif; */
+    font-size:24px;
+    font-family: nunito;
+
+  }
+  .form-row{
+    margin-top: 10px;
+  }
+  .title{
+    font-size: 20px;
+    /* font-family: 'Nunito', sans-serif; */
+    margin-left: 5%;
+    margin-bottom: 2%;
+    font-family: nunito-bold;
+    margin-top: -40px;
+    margin-left: 70px;
+
+  }
+  .form-group{
+      margin-left: 40px;
+  }
+  .ktp{
+    margin-left: 40px;
+    width: 170px;
+  }
+  .text-berhasil{
+    font-family: nunito-bold;
+    font-size: 16px;
+    margin-top: 50px;
+  }
+  .text-tolak{
+    font-family: nunito-bold;
+    font-size: 16px;
+    margin-top: 50px;
+  }
+  .ktp-form{
+    width: 210%!important;
+  }
+  .icon-berhasil{
+    margin-left: 65px;
+    margin-top: 20px;
+  }
+  .jarak{
+    margin-bottom: 5%;
+  }
+  .ceklis{
+    margin-left: -7px;
+  }
+  .popup-berhasil{
+    margin-top: 200px;
+    position: fixed;
+    margin-left: 42%;
+    z-index: 10000 !important;  
+  }
+  .kotak-warning{
+    margin-top: 30px;
+  }
+  .bg{
+    z-index:0;
+  }
+  .title-tolak{
+    font-family:nunito;
+  }
+  .logo-warning {
+    margin-left:30px;
+    margin-top:-120px;
+    z-index:10!important;
+  }
+  .anda-menolak{
+    font-family:nunito-bold;
+  }
+  .untuk-kenyamanan{
+    font-family:nunito;
+    color:#7E8299;
+  }
+  .alasan{
+    font-family:nunito;
+  }
+  .form-file::after{
+    left: 0;
+    right: auto;
+    border-left-width: 0;
+    border-right: inherit;
+  }
+  .upload-file{
+    border-radius: 10px;
+    margin-left: -20px;
+  }
+  ::placeholder {
+    border-radius: 8px;
+    font-size: 16px;
+    color: #909090 !important;
+    margin: 10px;
+    font-family: Nunito-reguler;
+  }
+  .title-thx{
+    margin-top: 100px;
+    /* font-family: 'Nunito', sans-serif; */
+    font-family: nunito;
+
+  }
+  .jenisKelamin{
+      width: 360px;
+      margin-left: 30px;
+  }
+  .label-jeniskelamin{
+      margin-left: 30px;
+  }
+  .judulVerif{
+      font-family: nunito;
+      font-size: 36px;
+      color: #3E4094;
+      margin-left: 90px;
+      width: 263px;
+    height: 49px;
+    margin-bottom: -20px;
+  }
+  .form-user{
+    margin-top:  -10px !important;
+    margin-bottom: 10%;
+    border-radius: 24px;
+    width: 80%;
+    height: 60% !important;
+    opacity: 1 !important;
+    background-color: white !important;
+  }
+  .img-thx{
+    margin-left: -30px;
+  }
+  .btn{
+    margin-top: 50px;
+  }
+  .icon-garis{
+    z-index: 0 !important;
+    margin-top: 20px;
+    margin-left: -50px;
+    height: 2px;
+    width: 100px;
+  }
+  .steps2, .steps3, .steps4, .steps5{
+    margin-left: -60px;
+  }
+  h1, h2, h3, h4, h5, h6{
+    /* font-family: 'Nunito', sans-serif; */
+    font-family: nunito;
+
+  }
+  label{
+    color: #646464 !important;
+    font-family: nunito;
+    font-size: 16px;
+
+  }
+
+  

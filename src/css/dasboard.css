@@ -1,0 +1,359 @@
+@font-face {
+	font-family: "Nunito800";
+	src: url("../font/NunitoSans_ExtraBold.ttf");
+}
+
+@font-face {
+	font-family: "Nunito600";
+	src: url("../font/NunitoSans_SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "Nunito200";
+	src: url("../font/NunitoSans_ExtraLight.ttf");
+}
+@font-face {
+	font-family: "Nunito400";
+	src: url("../font/NunitoSans_Regular.ttf");
+}
+@font-face {
+	font-family: "Nunito900";
+	src: url("../font/NunitoSans_Black.ttf");
+}
+@font-face {
+	font-family: "Nunito700";
+	src: url("../font/NunitoSans_Bold.ttf");
+}
+
+
+/* 
+.isiContent{
+
+    width: 84vw;
+    height: 80vh;
+}
+
+
+.dataContent{
+    width: 83vw;
+    height: 85vh;
+    margin: 0 auto;
+}
+
+.contentLeft{
+    width: 56vw;
+    height: 80vh;
+}
+
+.zui-table{
+    width: 52vw !important;
+    height: 40vh !important;
+}
+.zui-table-rounded thead th {
+    background-color: #FBFBFB;
+    border: none;
+    font-family: "Nunito-400" ;
+    color: #0A0A0A    ;
+    font-weight: 400;
+    font-size: 0.9vw;
+    border-bottom: 2px solid #0a040400   ;
+
+}
+.zui-table-rounded tbody td {
+    font-family: "Nunito-400" ;
+    color: #404040    ;
+    font-size: 0.75vw;
+    border-bottom: 0.75px solid #e8e5e500  ;
+    background-color: #ffffff;
+}
+.zui-table-rounded thead th:first-child {
+    border-radius: 10px 0 0 0;
+}
+.zui-table-rounded thead th:last-child {
+    border-radius: 0 10px 0 0;
+}
+.zui-table-rounded tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+.zui-table-rounded tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+.status{
+    color: #734011    ;
+    background-color: #FFF9F2 ;
+}
+.status1{
+    color: #379734
+    ;
+    background-color: #D5FBD5
+    ;
+}
+.status2{
+    color: #CB3A31    ;
+    background-color: #FFF4F2    ;
+}
+.action a{
+    color: #253863 ;
+}
+
+
+.paginationTableBox{
+    width: 52vw;
+    height: 8vh;
+}
+
+
+
+
+.contentRight{
+    width: 23vw;
+    height: 80vh;
+}
+
+.transaksi{
+    width: 25vw;
+    height: 15vh;
+    background-color: white;
+    border-radius: 8px ;
+}
+
+.box_user{
+    width: 16vw;
+    height: 17vh;
+    background-color: white;
+    border-radius: 8px ;
+    
+}
+
+.box_terlaris{
+    width: 22vw;
+    height: 40vh;
+    background-color: #ffffff;
+    border-radius: 10px  ;
+}
+.list_produk_terlaris {
+    width: 20vw;
+    height: 10vh;
+}
+
+
+.labelTerlaris {
+    border-bottom: 1px solid #E5ECFC;
+    margin: 15px;
+}
+
+.productImg img{
+    width: 3vw;
+    border-radius: 10px;
+}
+.labelNameProduk{
+    width: 12vw;
+}
+.namaProdukTerlaris{
+    font-size: 1vw;
+    font-family: "Nunito-600";
+}
+.hargaProdukTerlaris{
+    font-size: 1.3vw;
+    font-family: "Nunito-800";
+}
+.hintProdukTerlaris{
+    font-size: 0.7vw;
+    font-family: "Nunito-400";
+    color: #BFBFDB ;
+}
+
+.label_name_box {
+    font-family:"Nunito";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.55px    ;
+}
+.label_jumlah_transaksi{
+    font-family: "Nunito-800";
+    font-size: 24px;
+    line-height: 32.74px;
+    color: #000000
+;}
+
+.hint_box_transaksi{
+    font-family: "Nunito";
+    color: #ABABAB  ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.1px    ;
+
+    
+} */
+
+.box-dasboard {
+	width: 81vw;
+	height: auto;
+	border-radius: 10px;
+}
+.ds-kiri {
+	width: 52vw;
+	height: 120vh;
+}
+
+.ds-transaksi {
+	width: 52vw;
+	height: 15vh;
+}
+.ds-isi-transaksi {
+	width: 25vw;
+	height: 16vh;
+	border-radius: 8px;
+}
+.ds-label-transaksi {
+	font-family: "Nunito600";
+	font-size: 18px;
+	line-height: 24.55px;
+	color: #253863;
+}
+.label_jumlah_transaksi {
+	font-family: "Nunito800";
+	font-size: 24px;
+	line-height: 32.74px;
+	color: #353535;
+}
+
+.hint_box_transaksi {
+	font-family: "Nunito400";
+	color: #ababab;
+	font-size: 14px;
+	line-height: 19.1px;
+}
+
+.ds-user {
+	width: 52vw;
+	height: 18vh;
+}
+.ds-isi-user {
+	width: 16.5vw;
+	height: 18vh;
+	border-radius: 8px;
+}
+.ds-tabel {
+	width: 52vw;
+	height: 70vh;
+	border-radius: 8px;
+}
+.ds-tabel-content {
+	border-bottom: 0.6px solid #e6e6e6;
+}
+.ds-tabel-content td {
+	border-bottom: none;
+}
+.ds-tabel-isi {
+	font-family: "Nunito400";
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	color: #646464;
+}
+.ds-status {
+	font-family: "Nunito600";
+	font-size: 13px;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	color: #f9b40a;
+	background-color: #fff5de;
+	border: 1px solid #ffefc8;
+}
+.ds-tabel-content thead {
+	background-color: #fbfbfb;
+	border-bottom: 2px solid #e6e6e6;
+	font-family: "Nunito600";
+	font-size: 13px;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	color: #353535;
+}
+.ds-btn-table {
+	background-color: white !important;
+	border: 1px solid #253863 !important;
+	color: #253863 !important;
+	height: 4.5vh !important;
+	font-family: "Nunito600";
+	font-size: 15px;
+	line-height: 20px;
+	letter-spacing: 0.0125em;
+	text-align: left;
+}
+
+.ds-kanan {
+	width: 27vw;
+	height: 108vh;
+}
+.ds-isi-kanan {
+	border-radius: 8px;
+	width: 27vw;
+	height: 52.5vh;
+}
+.ds-box-label-produk {
+	border-bottom: 1px solid #f5f5ff;
+}
+.ds-label-produk {
+	color: #253863;
+	font-family: "Nunito800";
+	font-size: 18px;
+	line-height: 25px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.ds-hint-detail {
+	font-family: "Nunito800";
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #b1b1b1;
+}
+.ds-list-produk {
+	list-style: none;
+	height: 7.3vh;
+}
+.ds-img-produk img {
+	width: 3.5vw;
+	border-radius: 10px;
+}
+.ds-box-nama-produk{
+    width: 14vw;
+}
+.ds-nama-produk {
+	font-family: "Nunito600";
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #000000;
+}
+.ds-jenis-produk {
+	font-family: "Nunito400";
+	font-size: 13px;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	text-align: left;
+    color: #b1b1b1;
+
+}
+.ds-harga-produk {
+	font-family: "Nunito800";
+	font-size: 20px;
+	line-height: 23px;
+	letter-spacing: 0.0015em;
+	text-align: left;
+    color: #000000;
+
+}
+.ds-terjual-produk {
+	font-family: "Nunito400";
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	text-align: left;
+	color: #b1b1b1;
+}

@@ -1,0 +1,580 @@
+@font-face {
+	font-family: "Nunito600";
+	src: url("../font/NunitoSans_SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "Nunito200";
+	src: url("../font/NunitoSans_ExtraLight.ttf");
+}
+@font-face {
+	font-family: "Nunito400";
+	src: url("../font/NunitoSans_Regular.ttf");
+}
+@font-face {
+	font-family: "Nunito900";
+	src: url("../font/NunitoSans_Black.ttf");
+}
+@font-face {
+	font-family: "Nunito700";
+	src: url("../font/NunitoSans_Bold.ttf");
+}
+
+.detail {
+	width: 81vw;
+	height: auto;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+.box-profile {
+	width: 78vw;
+	height: 26vh;
+	border-bottom: 2px solid #eff2f5;
+}
+.pict-seller img {
+	width: 10vw;
+	height: 20vh;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+.name-profile {
+	height: 20vh;
+	width: 78vw;
+}
+.sellerName {
+	font-family: "Nunito700";
+	color: #3f4254;
+	font-size: 19px;
+	font-weight: 700;
+	line-height: 26px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.sellerHint {
+	font-family: "Nunito600";
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #b5b5c3;
+}
+
+.btn-call-seller {
+	background-color: #253863 !important;
+	height: 5vh !important;
+	width: 9vw !important;
+	border-radius: 6px !important;
+	font-family: "Nunito700" !important;
+	color: white !important;
+	font-size: 12px !important;
+
+	border: none !important;
+}
+.btn-status-call {
+	margin-left: auto;
+	margin-right: 0;
+	width: 30vw;
+}
+.progres {
+	width: 400px;
+	height: 35px;
+
+	/* background-color: grey; */
+}
+.progress-bar {
+	background-color: #035397 !important;
+	height: 6px !important;
+}
+.progress {
+	height: 6px !important;
+}
+.label-profil-status {
+	color: #b5b5c3;
+	font-family: "Nunito600";
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.jml-profil-status {
+	color: #3f4254;
+	font-family: "Nunito900";
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+	letter-spacing: 0em;
+	text-align: right;
+}
+
+.jml-total {
+	width: 170px;
+	height: 70px;
+	border-radius: 10px;
+	border: 1px dashed #e4e6ef;
+}
+.jml-produk {
+	width: 110px;
+	height: 70px;
+	border-radius: 10px;
+	border: 1px dashed #e4e6ef;
+}
+.jml-trans {
+	width: 130px;
+	height: 70px;
+	border-radius: 10px;
+	border: 1px dashed #e4e6ef;
+}
+
+.jml-num {
+	color: #3f4254;
+	font-family: "Nunito900";
+	font-size: 20px;
+}
+.jml-hint {
+	color: #b5b5c3;
+	font-family: "Nunito400";
+	font-size: 14px;
+}
+
+.tab-profile {
+	width: 78vw;
+	height: auto;
+}
+.tab-ul {
+	margin-bottom: 30px !important;
+}
+.btn-list.active {
+	background-color: rgba(255, 255, 255, 0) !important;
+	color: #253863 !important;
+	border-bottom: 2px solid #253863 !important;
+	border-radius: 0px !important;
+}
+.btn-list {
+	color: #a1a5b7 !important;
+	font-family: "Nunito600";
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: 0em;
+}
+
+/* Box Info */
+
+.box-info {
+	width: 81vw;
+	height: 100vh;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+.label-info {
+	border-bottom: 1px solid #eff2f5;
+}
+.basicInfo {
+	font-family: "Nunito700";
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 27px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #253863;
+	margin-bottom: 0px;
+}
+.info {
+	height: auto;
+}
+
+/* FORM */
+
+.label-form {
+	font-family: "Nunito700";
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 20px;
+	letter-spacing: 0em;
+	color: #646464;
+}
+
+.inputFilter::placeholder {
+	font-family: "Nunito200" !important;
+	font-size: 14px !important;
+	line-height: 21.82px !important;
+}
+
+.input-form input {
+	background-color: #EEF1F9 !important;
+	width: 85%;
+	height: 5.6vh;
+	font-family: "Nunito400";
+	font-size: 12px;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: left;
+	border: none;
+	color: #909090 !important;
+}
+.input-form textarea {
+	background-color: #EEF1F9 !important;
+	width: 85%;
+	height: 10vh;
+	font-family: "Nunito400";
+	font-size: 12px;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: left;
+	border: none;
+	color: #5e6278;
+}
+.statusDana {
+	font-family: "Nunito400";
+	font-size: 12px;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #5e6278;
+}
+
+.box-btn-ubah {
+	border-top: 1px solid #eff2f5;
+	height: 10vh;
+}
+.btn-ubah {
+	background-color: #253863 !important;
+	height: 5vh !important;
+	width: 7vw !important;
+	border-radius: 6px !important;
+	font-family: "Nunito700" !important;
+	color: white !important;
+	font-size: 12px !important;
+	border: none !important;
+}
+
+.box-info-seller {
+	width: 81vw;
+	height: auto;
+	border-radius: 10px;
+}
+/* ---------------------------------------------------Profil Usaha & Pemilik */
+.boxProfileUsaha {
+	background-color: white;
+	border-radius: 10px;
+}
+.boxLabelRekening {
+	border-bottom: 1px solid #eff2f5;
+}
+
+.labelBasicInfo {
+	font-family: "Nunito700";
+	font-size: 15px;
+	line-height: 18px;
+	color: #3f4254;
+}
+.hintBasicInfo {
+	font-family: "Nunito400";
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #b5b5c3;
+}
+.infoSosmed {
+	border-bottom: 1px solid #eff2f5;
+}
+.website {
+	width: 85%;
+	height: 5.6vh;
+}
+.website a {
+	text-decoration: none;
+}
+.website a {
+	font-family: "Nunito400";
+	font-size: 14px;
+	color: #00a3ff;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.nonAktifAkun {
+	width: 73vw;
+	height: 90px;
+	border-radius: 7px;
+	border: 1px dashed #f89c47;
+	background-color: #fff9f4;
+}
+
+.labelWarning {
+	font-family: "Nunito700";
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #3f4254;
+}
+.labelWaringText {
+	font-family: "Nunito400";
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #7e8299;
+}
+.formCheck {
+	border-bottom: 1px solid #eff2f5;
+	height: 50px;
+}
+.btn-nonAktiv button {
+	background-color: #f1416c;
+	border: none;
+	color: white;
+	font-family: "Nunito600";
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 18px;
+	letter-spacing: 0em;
+	text-align: center;
+	padding: 10px;
+}
+/* ---------------------------------------------------Profil Usaha & Pemilik  */
+
+/* ---------------------------------------------------Produk & Izin  */
+.prd-hintProduk {
+	font-family: "Nunito400" !important;
+	font-size: 14px;
+	text-align: left;
+	color: #7f7f7f;
+}
+
+.prd-tabel {
+	height: auto;
+}
+.prd-tabel-head {
+	background-color: #fbfbfb;
+	border-bottom: 2px solid #e6e6e6;
+}
+.prd-tabel-head th {
+	font-family: "Nunito600";
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	color: #353535;
+}
+
+.prd-img img {
+	width: 3vw;
+	border-radius: 8px;
+}
+.prd-tbody td {
+	font-family: "Nunito400";
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #646464;
+	border-bottom: none;
+}
+.izinVerif {
+	color: #31ac3d !important;
+	background-color: #d6eed8 !important;
+	font-family: "Nunito600" !important;
+	font-size: 13px !important;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	height: 3.5vh !important;
+	width: 12vw;
+}
+.izinTdkAda {
+	color: #fbfbfb;
+	background-color: #e6e6e6 !important;
+	font-family: "Nunito600" !important;
+	font-size: 13px !important;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	height: 3.5vh !important;
+	width: 12vw;
+}
+.izinBlmVerif {
+	color: #ffb72b !important;
+	background-color: #fff1d5 !important;
+	font-family: "Nunito600" !important;
+	font-size: 13px !important;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	height: 3.5vh !important;
+	width: 12vw;
+}
+.izinDitolak {
+	color: #ff1818 !important;
+	background-color: #ffd1d1 !important;
+	font-family: "Nunito600" !important;
+	font-size: 13px !important;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	height: 3.5vh !important;
+	width: 12vw;
+}
+
+/* ---------------------------------------------------Produk  */
+/* ---------------------------------------------------Statistik  */
+.boxProfileStatistik {
+	border-radius: 10px;
+	height: 100vh;
+	width: 81vw !important;
+}
+.box-kiri {
+	width: 50vw;
+	height: 90vh;
+}
+.box-profit {
+	width: 50vw;
+	height: 15vh;
+}
+.box-profit-isi {
+	background-color: white;
+	height: 15vh;
+	width: 15.9vw;
+	border-radius: 10px;
+}
+.lebelProfit {
+	font-family: "Nunito600";
+	font-size: 18px;
+	line-height: 23px;
+	letter-spacing: 0.0015em;
+	text-align: left;
+	color: #253863;
+}
+.jmlProfit {
+	font-family: "Nunito600";
+	font-size: 22px;
+	line-height: 18px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #000000;
+}
+.box-chart {
+	margin-top: 3vh;
+	width: 50vw;
+	height: 72vh;
+	border-radius: 10px;
+}
+.labelStatistik {
+	color: #253863;
+	font-family: "Nunito700";
+	font-size: 20px;
+	line-height: 23px;
+	letter-spacing: 0.0015em;
+	text-align: left;
+}
+.labeljmlStatistik {
+	font-family: "Nunito400";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+	letter-spacing: 0.0015em;
+	color: #646464;
+}
+.btn-statistik.active {
+	background-color: #eef1f9 !important;
+	color: #253863 !important;
+	border-radius: 8px !important;
+}
+.btn-statistik {
+	color: #253863 !important;
+	font-family: "Nunito600";
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0.0015em;
+	text-align: left;
+}
+.box-kanan {
+	width: 29vw;
+	height: 90vh;
+	border-radius: 10px;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='480' height='199' fill='none' viewBox='0 0 480 199'%3e%3cg id='Group'%3e%3cpath id='Vector 25' fill='url(%23paint0_linear_272_16163)' stroke='%23253863' stroke-width='3' d='M68.1962 46.4944L55.6585 57.0349C49.7751 61.9812 42.3351 64.6931 34.6487 64.6931C16.6173 64.6931 2 79.3104 2 97.3418V190C2 193.866 5.13401 197 9.00001 197H471C474.866 197 478 193.866 478 190V99.5V15.1305C478 7.87871 472.121 2 464.87 2C461.778 2 458.786 3.09065 456.42 5.07991L436.44 21.8774C427.941 29.0222 417.194 32.9395 406.092 32.9395C394.989 32.9395 384.242 36.8567 375.743 44.0015L371.81 47.3084C362.832 54.8558 351.48 58.9937 339.752 58.9937C328.023 58.9937 316.671 54.8558 307.694 47.3084L289.036 31.6228C279.101 23.2704 266.538 18.691 253.559 18.691C240.579 18.691 228.016 23.2704 218.081 31.6228L210.496 37.9993C199.684 47.0893 186.011 52.0731 171.886 52.0731H164.073C154.471 52.0731 145.177 48.6853 137.827 42.5063C130.477 36.3272 121.183 32.9395 111.581 32.9395H105.384C91.7786 32.9395 78.6099 37.7395 68.1962 46.4944Z'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient id='paint0_linear_272_16163' x1='240.596' x2='239.806' y1='-52' y2='170.497' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23999EF2'/%3e%3cstop offset='1' stop-color='%23999EF2' stop-opacity='0.4'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: contain;
+}
+.lap-produk {
+	width: 29vw;
+	height: 66vh;
+}
+.label-lap-produk {
+	height: 64vh;
+	width: 100%;
+}
+.btn-lap-produk {
+	height: 5vh;
+	width: 7vw;
+	margin-left: -7vw;
+}
+
+.btn-filter-terlaris.active {
+	background-color: #253863 !important;
+	color: #253863 !important;
+	border-radius: 8px !important;
+}
+.btn-filter-terlaris {
+	background-color: #bfbfdb !important;
+	color: #253863 !important;
+	border-radius: 8px !important;
+	padding: 4px 15px 3px 20px !important;
+}
+.labelProdukTerlaris .label {
+	font-family: "Nunito700";
+	font-size: 20px;
+	line-height: 23px;
+	letter-spacing: 0.0015em;
+	text-align: left;
+	color: #253863;
+}
+.labelProdukTerlaris .hintLabel {
+	font-family: "Nunito400";
+	font-size: 13px;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	text-align: left;
+	color: #7f7f7f;
+}
+.namaproduk {
+	font-family: "Nunito600";
+	font-size: 15px;
+	line-height: 16px;
+	letter-spacing: 0.001em;
+	text-align: left;
+	color: #000000;
+}
+.hintjenisproduk {
+	color: #7f7f7f;
+	font-family: "Nunito400";
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	text-align: left;
+}
+.persentase {
+	background-color: #d6eed8;
+	color: #31ac3d;
+	font-family: "Nunito600";
+	font-size: 13px;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	text-align: left;
+	border-radius: 8px;
+}
+.st-img-produk {
+	width: 50px;
+}
+
+.st-list-produk {
+	list-style: none;
+}
+.box-nama-produk {
+	width: 65%;
+}
+
+/* ---------------------------------------------------Statistik  */
