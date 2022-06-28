@@ -1,8 +1,7 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { Bar } from "react-chartjs-2";
-// eslint-disable-next-line
-import { Chart as ChartJS } from "chart.js/auto"; 
+import { Chart as ChartJS } from "chart.js/auto";
 
 function Statistik() {
 	return (

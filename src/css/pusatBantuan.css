@@ -20,7 +20,7 @@
 	src: url("../font/NunitoSans_Bold.ttf");
 }
 .breadcrumb-item + .breadcrumb-item::before {
-	content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='20' fill='none' viewBox='0 0 14 25'%3e%3cg id='Group'%3e%3cpath id='Vector' stroke='%23253863' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.25' d='M2 2L12.6875 12.6875L2 23.375'/%3e%3c/g%3e%3c/svg%3e");
+	content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='20' fill='none' viewBox='0 0 14 25'%3e%3cg id='Group'%3e%3cpath id='Vector' stroke='%23253863' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.25' d='M2 2L12.6875 12.6875L2 23.375'/%3e%3c/g%3e%3c/svg%3e") !important;
 }
 
 .breadcumb-label {
@@ -59,78 +59,293 @@
 	line-height: 25px;
 }
 
-.tbl-PusatBantuan {
+/*  Componentnya */
+.container-PusatBantuan {
 	width: 81vw;
 	height: auto;
-	/* border-bottom: 1px solid ; */
 }
-.table-head {
-	background-color: #fbfbfb;
-	border-bottom: 2px solid #e0e0e0;
-}
-.garisTbl {
-	width: 78vw;
-	height: 1px;
-	background-color: #bfbfdb;
+.boxListPusatBantuan {
+	width: 100%;
+	height: 580px;
 }
 
-.tbl-PusatBantuan th {
+.box-pusatBantuan {
+	width: 68%;
+}
+
+.listBantuan {
+	height: auto;
+	width: 100%;
+	border: 1px solid #b6bdcb;
+	border-radius: 8px;
+	cursor: pointer;
+	box-shadow: 3px 2px 3px #b6bdcb;
+}
+.listBantuan:focus,
+.listBantuan:focus {
+	background-color: #eef1f9;
+}
+
+.labelUserBantuan {
+	font-family: "Nunito600";
+	font-size: 16px;
+	line-height: 16px;
+	letter-spacing: 0.005em;
+	color: #909090;
+}
+.labelBantuan {
+	font-family: "Nunito600";
+	font-size: 16px;
+	line-height: 16px;
+	letter-spacing: 0.005em;
+	color: #253863;
+}
+.labelHintBantuan {
 	font-family: "Nunito400";
 	font-size: 14px;
-	line-height: 20px;
+	line-height: 14px;
 	letter-spacing: 0.0075em;
-	font-weight: normal;
+	color: #7f7f7f;
 }
-.tbl-PusatBantuan td {
+.namaAkunBantuan {
+	font-family: "Nunito600";
+	font-size: 12px;
+	line-height: 12px;
+	letter-spacing: 0.0075em;
+	color: #909090;
+}
+.tgl-bantuan {
+	font-family: "Nunito600";
+	font-size: 12px;
+	line-height: 12px;
+	letter-spacing: 0.0075em;
+	color: #909090;
+}
+
+.isiBantuan {
+	margin-top: -50px;
+	width: 30%;
+	height: 655px;
+	border: 1px solid #b6bdcb;
+	border-radius: 8px;
+	background-color: #fbfbfb;
+}
+
+.labelPermohonan {
+	font-family: "Nunito600";
+	font-size: 17px;
+	line-height: 18px;
+	letter-spacing: 0.005em;
+	color: #353535;
+}
+.nama-user img {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	object-fit: cover;
+}
+.labelNamaAkun {
 	font-family: "Nunito400";
-	color: #646464;
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: 400;
 	line-height: 14px;
 	letter-spacing: 0.0075em;
-	padding: 12px !important;
-	border: none !important;
-}
-.box-info-bantuan-buyer {
-	width: 81vw;
-	height: auto;
-	border-radius: 10px;
-	padding-left: 12px;
-	padding-right: 12px;
+	color: #353535;
 }
 
-.box-btn-hubungiUser {
-	height: 10vh;
+.labelFillInfo {
+	font-family: "Nunito400";
+	font-size: 15px;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	text-align: left;
+	color: #353535;
 }
-.btn-hubungiUser {
-	background-color: #253863 !important;
-	height: 6vh !important;
-	width: 11vw !important;
-	border-radius: 6px !important;
-	font-family: "Nunito600" !important;
-	color: white !important;
-	font-size: 14.5px !important;
+.list-info-user {
+	height: auto;
+}
+.detail-bantuan {
+	height: 250px;
+}
+.detail-bantuan-selesai {
+	height: auto;
+}
+.isiFillInfo {
+	font-family: "Nunito400";
+	font-size: 15px;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	color: #7f7f7f;
+}
+
+.btn-moderasi-bantuan {
+	font-family: "Nunito600";
+	font-size: 17px;
+	text-align: center;
+	color: white;
+	background-color: #253863;
+	border-radius: 8px;
+	border: 1px solid #253863;
+	font-weight: normal;
+}
+.btn-tutup-bantuan {
+	font-style: normal;
+	font-family: "Nunito600";
+	font-size: 17px;
+	text-align: center;
+	background-color: white;
+	color: #253863;
+	border-radius: 8px;
+	border: 1px solid #253863;
+}
+.box-btn-bantuan {
+	height: 100px;
+	bottom: 5px;
+}
+
+/* PESAN */
+.container-pesan-pemohon {
+	width: 97%;
+	height: auto;
+}
+.pesanPempohon {
+	width: 30%;
+	border: 1px solid #b6bdcb;
+	border-radius: 8px;
+	background-color: #fbfbfb;
+}
+.box-pesan {
+	width: 68.5%;
+}
+.isi-chat {
+	width: 100%;
+	height: 84%;
+	background-color: red;
+	border: 1px solid #b6bdcb;
+	border-radius: 8px;
+	background-color: #fbfbfb;
+}
+.chat-text {
+	width: 100%;
+	height: 14%;
+	border: 1px solid #b6bdcb;
+	border-radius: 8px;
+	background-color: #fbfbfb;
+}
+.btn-kirim-pesan {
+	width: 50%;
+	border: 4px solid #253863 !important;
+	border-radius: 8px;
+	background-color: #253863;
+	color: white;
+}
+.image-upload > input {
+	display: none;
+}
+
+.image-upload img {
+	width: 80px;
+	cursor: pointer;
+}
+.btn-icon-upload {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='42' height='48' fill='none' viewBox='0 0 42 48'%3e%3cg id='Group'%3e%3cg id='Frame 95'%3e%3crect width='41' height='47' x='0.5' y='0.5' fill='%23FBFBFB' rx='7.5'/%3e%3cg id='IONIcon/A/attach/outline'%3e%3cg id='Vector_____0_0_BGCIHMPOSK'%3e%3cpath fill='white' d='M19.1287 21.0007V27.7437C19.1365 28.2368 19.3379 28.707 19.6893 29.053C20.0408 29.3989 20.5141 29.5928 21.0073 29.5928C21.5004 29.5928 21.9738 29.3989 22.3252 29.053C22.6766 28.707 22.878 28.2368 22.8858 27.7437L22.8919 18.9054C22.897 18.484 22.8184 18.0657 22.6606 17.6749C22.5029 17.284 22.2692 16.9284 21.9729 16.6286C21.6767 16.3288 21.324 16.0907 20.9351 15.9282C20.5462 15.7658 20.1289 15.6821 19.7074 15.6821C19.2859 15.6821 18.8687 15.7658 18.4798 15.9282C18.0909 16.0907 17.7381 16.3288 17.4419 16.6286C17.1457 16.9284 16.9119 17.284 16.7542 17.6749C16.5964 18.0657 16.5178 18.484 16.523 18.9054V27.8032C16.5144 28.3966 16.6238 28.9857 16.8449 29.5363C17.0661 30.087 17.3944 30.5882 17.811 31.0108C18.2275 31.4334 18.7239 31.769 19.2713 31.998C19.8187 32.2271 20.4061 32.3451 20.9995 32.3451C21.5929 32.3451 22.1804 32.2271 22.7278 31.998C23.2751 31.769 23.7715 31.4334 24.1881 31.0108C24.6046 30.5882 24.933 30.087 25.1541 29.5363C25.3752 28.9857 25.4847 28.3966 25.4761 27.8032V19.4886'/%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='1.5' d='M19.1287 21.0007V27.7437C19.1365 28.2368 19.3379 28.707 19.6893 29.053C20.0408 29.3989 20.5141 29.5928 21.0073 29.5928C21.5004 29.5928 21.9738 29.3989 22.3252 29.053C22.6766 28.707 22.878 28.2368 22.8858 27.7437L22.8919 18.9054C22.897 18.484 22.8184 18.0657 22.6606 17.6749C22.5029 17.284 22.2692 16.9284 21.9729 16.6286C21.6767 16.3288 21.324 16.0907 20.9351 15.9282C20.5462 15.7658 20.1289 15.6821 19.7074 15.6821C19.2859 15.6821 18.8687 15.7658 18.4798 15.9282C18.0909 16.0907 17.7381 16.3288 17.4419 16.6286C17.1457 16.9284 16.9119 17.284 16.7542 17.6749C16.5964 18.0657 16.5178 18.484 16.523 18.9054V27.8032C16.5144 28.3966 16.6238 28.9857 16.8449 29.5363C17.0661 30.087 17.3944 30.5882 17.811 31.0108C18.2275 31.4334 18.7239 31.769 19.2713 31.998C19.8187 32.2271 20.4061 32.3451 20.9995 32.3451C21.5929 32.3451 22.1804 32.2271 22.7278 31.998C23.2751 31.769 23.7715 31.4334 24.1881 31.0108C24.6046 30.5882 24.933 30.087 25.1541 29.5363C25.3752 28.9857 25.4847 28.3966 25.4761 27.8032V19.4886'/%3e%3c/g%3e%3c/g%3e%3crect width='41' height='47' x='0.5' y='0.5' stroke='%23B1B1B1' rx='7.5'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+	width: 42px;
+	height: 48px;
+	cursor: pointer;
+}
+.textarea-pesan {
+	height: 100%;
+}
+.textarea-pesan textarea {
+	height: 100%;
+	resize: none;
 	border: none !important;
+	background-color: #fbfbfb;
+}
+
+/* MODAL */
+.dialogModalPenyelesaian {
+	width: 80vw;
+	margin-left: 300px;
+}
+.modalKonfirmasi {
+	background-color: red;
+	width: 80vw;
+}
+
+.modalContent-konfirmasi {
+	width: 60vw !important;
+	margin-left: -48%;
+}
+.modal-header-konfirmasi {
+	border-bottom: none !important;
+}
+.body-modal-konfirmasi {
+	height: auto;
+}
+.box-form-modal-konfirmasi {
+	width: 80%;
+}
+.modal-label-title {
+	font-family: "Nunito700";
+	font-size: 30px;
+	line-height: 39px;
+	letter-spacing: 0.0025em;
+	color: #253863;
+	margin-top: 300px;
+}
+.form-label-konfirmasi {
+	font-family: "Nunito400";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: -0.006em;
+	color: #646464;
+}
+.form-konfirmas-placeholder::placeholder {
+	font-family: "Nunito400";
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #909090;
+}
+.form-konfirmas-placeholder {
+	font-family: "Nunito400";
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #909090;
+	height: 6vh;
+}
+.form-textarea textarea {
+	height: 100px !important;
+	background-color: #eef1f9;
+}
+
+.btn-modal-kembali {
+	font-family: "Nunito600";
+	font-size: 18px;
+	font-weight: 600;
 	line-height: 20px;
 	letter-spacing: 0.0075em;
+	background-color: #FBFBFB;
+	color: #253863;
+	border-radius: 6px;
+	border: 1px solid #B6BDCB;
+	width: 130px;
+	height: 40px;
 }
-.pict-bantuan-seller img {
-	width: 10vw;
-	height: 20vh;
-	border-radius: 8px;
-	object-fit: cover;
-}
-.pict-bantuan-buyer img {
-	width: 10vw;
-	height: 20vh;
-	border-radius: 8px;
-	object-fit: cover;
-}
-.labelBlmSelesai{
-	color:#646464;
-font-family: "Nunito600";
-font-size: 15px;
-line-height: 23px;
-letter-spacing: 0.0015em;
-
+.btn-modal-konfirmasi {
+	font-family: "Nunito600";
+	font-size: 18px;
+	line-height: 20px;
+	letter-spacing: 0.0075em;
+	background-color: #253863;
+	color: white;
+	border-radius: 6px;
+	border: none;
+	width: 130px;
+	height: 40px;
 }

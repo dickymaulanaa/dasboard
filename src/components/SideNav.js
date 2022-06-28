@@ -1,5 +1,5 @@
 import { Button } from "react-bootstrap";
-import "../css/sideNav.css"
+import "../css/sidenav.css";
 import iconTokrum from "../image/icontokrum.png";
 import Dasboard from "./Dasboard";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -14,6 +14,7 @@ import { useState } from "react";
 import PusatBantuan from "../pages/PusatBantuan";
 import PusatBantuanSeller from "../pages/PusatBantuanSeller";
 import PusatBantuanBuyer from "../pages/PusatBantuanBuyer";
+import Pesan from "./pusatBantuan/Pesan";
 
 function SideNav() {
 	const [showNotif, setShowNotif] = useState(false)
@@ -276,8 +277,8 @@ function SideNav() {
 							<Route path="/marketing" element={<Marketing />} />
 							<Route path="/transaksi" element={<Transaksi />} />
 							<Route path="/pusatbantuan" element={<PusatBantuan/>}/>
-							<Route path="/pusatbantuan/seller" element={<PusatBantuanSeller/>}/>
-							<Route path="/pusatbantuan/buyer" element={<PusatBantuanBuyer/>}/>
+							<Route path="/pusatbantuan/pesan" element={<Pesan/>}/>
+
 						</Routes>
 					</div>
 				</div>

@@ -53,14 +53,6 @@ function IzinDokumen() {
 		setHideAlert(true);
 	}
 
-	//     function showAlert(){
-	//         if(hideAlert == true){
-	//             setHideAlert(false)
-	//         }else{
-	//             setHideAlert(true)
-	//         }
-	//     }
-
 	// download image
 	const download = (e) => {
 		console.log(e.target.href);

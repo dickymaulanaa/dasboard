@@ -86,7 +86,7 @@ function Produk() {
 						<tbody className="prd-tbody ">
 							<tr>
 								<td className="prd-img">
-									<img src="https://s.kaskus.id/images/2019/10/11/8308943_20191011095126.jpg" alt="produk" />
+									<img src="https://s.kaskus.id/images/2019/10/11/8308943_20191011095126.jpg" alt="prd-image" />
 								</td>
 								<td className="py-3">Kue Coklat</td>
 								<td className="py-3">720gr</td>
@@ -99,7 +99,7 @@ function Produk() {
 							</tr>
 							<tr>
 								<td className="prd-img">
-									<img src="https://s.kaskus.id/images/2019/10/11/8308943_20191011095126.jpg" alt="produk" />
+									<img src="https://s.kaskus.id/images/2019/10/11/8308943_20191011095126.jpg" alt="prd-image" />
 								</td>
 								<td className="py-3">Kue Coklat</td>
 								<td className="py-3">720gr</td>
@@ -112,7 +112,7 @@ function Produk() {
 							</tr>
 							<tr>
 								<td className="prd-img">
-									<img src="https://s.kaskus.id/images/2019/10/11/8308943_20191011095126.jpg" alt="produk" />
+									<img src="https://s.kaskus.id/images/2019/10/11/8308943_20191011095126.jpg" alt="prd-image" />
 								</td>
 								<td className="py-3">Kue Coklat</td>
 								<td className="py-3">720gr</td>
@@ -125,7 +125,7 @@ function Produk() {
 							</tr>
 							<tr>
 								<td className="prd-img">
-									<img src="https://s.kaskus.id/images/2019/10/11/8308943_20191011095126.jpg" alt="produk" />
+									<img src="https://s.kaskus.id/images/2019/10/11/8308943_20191011095126.jpg" alt="prd-image" />
 								</td>
 								<td className="py-3">Kue Coklat</td>
 								<td className="py-3">720gr</td>
@@ -138,7 +138,7 @@ function Produk() {
 							</tr>
 							<tr>
 								<td className="prd-img">
-									<img src="https://s.kaskus.id/images/2019/10/11/8308943_20191011095126.jpg" alt="produk" />
+									<img src="https://s.kaskus.id/images/2019/10/11/8308943_20191011095126.jpg" alt="prd-image" />
 								</td>
 								<td className="py-3">Kue Coklat</td>
 								<td className="py-3">720gr</td>
@@ -151,7 +151,7 @@ function Produk() {
 							</tr>
 							<tr>
 								<td className="prd-img">
-									<img src="https://s.kaskus.id/images/2019/10/11/8308943_20191011095126.jpg" alt="produk" />
+									<img src="https://s.kaskus.id/images/2019/10/11/8308943_20191011095126.jpg" alt="prd-image" />
 								</td>
 								<td className="py-3">Kue Coklat</td>
 								<td className="py-3">720gr</td>
