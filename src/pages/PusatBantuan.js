@@ -73,7 +73,7 @@ function PusatBantuan() {
 												fill="#253863"
 											/>
 										</svg>
-										<span className="breadcumb-label ms-1 mt-1">Tabel Pusat Bantuan</span>
+										<span className="breadcumb-label ms-1 mt-1">Tiket Pusat Bantuan</span>
 									</div>
 								</Link>
 							</li>
@@ -184,8 +184,8 @@ function PusatBantuan() {
 										<Form>
 											<Form.Check type="checkbox" label="Data Terbaru" id="checkTerbaru" />
 											<Form.Check type="checkbox" label="Data Terakhir" id="checkTerakhir" />
-											<Form.Check type="checkbox" label="Urutkan Sesuai Abjad" id="UrutAbjad" />
-											<Form.Check type="checkbox" label="Urutkan Sesuai Status" id="UrutStatus" />
+											<Form.Check type="checkbox" label="Urutkan Sesuai Nomor Tiket" id="UrutAbjad" />
+											<Form.Check type="checkbox" label="Urutkan Sesuai Abjad Buyer" id="UrutStatus" />
 										</Form>
 									</div>
 									<div className="btn-filter-box d-flex justify-content-end p-3 mt-2">
@@ -246,20 +246,19 @@ function PusatBantuan() {
 							role="tabpanel"
 							aria-labelledby="pills-PermintaanBantuan"
 						>
-							<PermintaanBantuan/>
+							<PermintaanBantuan />
 						</div>
 						{/* Permintaan Bantuan End */}
 
 						{/* Bantuan Aktif  Start*/}
 						<div className="tab-pane fade " id="pills-BantuanAktif" role="tabpanel" aria-labelledby="pills-BantuanAktif">
-							<BantuanAktif/>
+							<BantuanAktif />
 						</div>
 						{/* Bantuan Aktif  End*/}
 
 						{/* Bantuan Selesai Start */}
 						<div className="tab-pane fade " id="pills-BantuanSelesai" role="tabpanel" aria-labelledby="pills-BantuanSelesai">
-							<BantuanSelesai/>
-						
+							<BantuanSelesai />
 						</div>
 						{/* Bantuan Selesai End */}
 					</div>

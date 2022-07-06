@@ -6,7 +6,7 @@ import "../css/pusatBantuan.css";
 function PusatBantuanSeller() {
 	return (
 		<>
-		<Container fluid>
+			<Container fluid>
 				<div className="ms-4 mt-3">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
@@ -39,7 +39,7 @@ function PusatBantuanSeller() {
 												</g>
 											</g>
 										</svg>
-										<span className="breadcumb-label ms-1">Tabel Pusat Bantuan</span>
+										<span className="breadcumb-label ms-1">Tiket Pusat Bantuan</span>
 									</div>
 								</Link>
 							</li>
@@ -82,8 +82,10 @@ function PusatBantuanSeller() {
 										</g>
 									</svg>
 									<span className="breadcumb-label ms-1">
-                                             <Link to="/pusatbantuan/seller" style={{ textDecoration: "none", color: "#253863" }}>Detail Bantuan</Link>
-                                                  </span>
+										<Link to="/pusatbantuan/seller" style={{ textDecoration: "none", color: "#253863" }}>
+											Detail Bantuan
+										</Link>
+									</span>
 								</div>
 							</li>
 							<li class="breadcrumb-item active mt-1 " aria-current="page">

@@ -9,7 +9,7 @@ function Produk() {
 					<Row className=" w-100">
 						<Col>
 							<div className="d-flex flex-column">
-								<p className="ms-3 mb-0 p-0">Tabel Produk</p>
+								<p className="ms-3 mb-0 p-0 basicInfo">Tabel Produk</p>
 								<span className="ms-3 prd-hintProduk p-0">Berikut semua Produk Anda</span>
 							</div>
 						</Col>

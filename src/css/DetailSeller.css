@@ -42,6 +42,17 @@
 	height: 20vh;
 	width: 78vw;
 }
+
+.notActive {
+	background-color: #ffd1d1;
+	color: #ff1818;
+	border: 1px solid #ffb2b2;
+	font-family: "Nunito600";
+	font-size: 13px;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	border-radius: 6px;
+}
 .sellerName {
 	font-family: "Nunito700";
 	color: #3f4254;
@@ -187,9 +198,8 @@
 /* FORM */
 
 .label-form {
-	font-family: "Nunito700";
+	font-family: "Nunito600";
 	font-size: 13px;
-	font-weight: 700;
 	line-height: 20px;
 	letter-spacing: 0em;
 	color: #646464;
@@ -202,7 +212,7 @@
 }
 
 .input-form input {
-	background-color: #EEF1F9 !important;
+	background-color: #eef1f9 !important;
 	width: 85%;
 	height: 5.6vh;
 	font-family: "Nunito400";
@@ -214,7 +224,7 @@
 	color: #909090 !important;
 }
 .input-form textarea {
-	background-color: #EEF1F9 !important;
+	background-color: #eef1f9 !important;
 	width: 85%;
 	height: 10vh;
 	font-family: "Nunito400";
@@ -291,10 +301,9 @@
 .website a {
 	font-family: "Nunito400";
 	font-size: 14px;
-	color: #00a3ff;
+	color: #035397;
 	line-height: 19px;
 	letter-spacing: 0em;
-	text-align: left;
 }
 
 .nonAktifAkun {
@@ -325,8 +334,15 @@
 	border-bottom: 1px solid #eff2f5;
 	height: 50px;
 }
-.btn-nonAktiv button {
-	background-color: #f1416c;
+.formCheck label {
+	color: #ff1818 !important;
+	font-family: "Nunito600";
+	font-size: 15px;
+	line-height: 16px;
+	letter-spacing: 0.005em;
+}
+.btn-nonAktif {
+	background-color: #f1416c !important;
 	border: none;
 	color: white;
 	font-family: "Nunito600";
@@ -336,6 +352,60 @@
 	letter-spacing: 0em;
 	text-align: center;
 	padding: 10px;
+	box-shadow: none !important;
+	border: 1px solid #f1416c !important	;
+}
+/* .btn-nonAktif:hover {
+	background-color: #f1416c;
+	border: none;
+	color: white;
+	font-family: "Nunito600";
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 18px;
+	letter-spacing: 0em;
+	text-align: center;
+	padding: 10px !important;
+} */
+.btn-Aktif {
+	background-color: #31ac3d !important	;
+	border: none;
+	color: white;
+	font-family: "Nunito600";
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 18px;
+	letter-spacing: 0em;
+	text-align: center;
+	padding: 10px;
+	height: 40px !important;
+	box-shadow: none !important;
+	border: 1px solid #31ac3d !important	;
+}
+
+.alertNonaktif {
+	background-color: #dbf3ef !important;
+	border: 2px solid #bae3be !important;
+	width: 550px;
+	height: 60px;
+	border-radius: 8px !important;
+	margin-right: 200px !important;
+	font-family: "Nunito600";
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0.0015em;
+	color: #353535;
+	text-align: left;
+}
+.btn-close-alert {
+	border: none;
+	background-color: transparent;
+	color: #49c2ae;
+	font-family: "Nunito700";
+	font-size: 20px;
+	line-height: 23px;
+	letter-spacing: 0.0015em;
+	text-align: right;
 }
 /* ---------------------------------------------------Profil Usaha & Pemilik  */
 

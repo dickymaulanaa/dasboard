@@ -74,7 +74,9 @@ function PermintaanBantuan() {
 				</div>
 				<div className="box-btn-bantuan d-flex align-items-end ">
 					<div className=" d-flex flex-column justify-content-center w-100  align-items-center">
-						<button className="btn-moderasi-bantuan w-50 my-1 py-2">Bantu Moderasi</button>
+					<button className="btn-moderasi-bantuan w-50 my-1 py-2">
+							<Link to="/pusatbantuan/pesan" style={{textDecoration:"none", color:"white"}}>Bantu Moderasi</Link>
+						</button>
 						<button className="btn-tutup-bantuan w-50 py-2" onClick={() => setShowBantuan(false)}>
 							Tutup
 						</button>

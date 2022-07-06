@@ -35,7 +35,7 @@ function SideNav() {
 											className="accordion-button nonV "
 											aria-current="true"
 											type="button"
-											data-bs-toggle="collapse"
+											data-bs-toggle="collapse"	
 											data-bs-target="#flush-collapseOne"
 											aria-expanded="true"
 											aria-controls="flush-collapseOne"
@@ -223,7 +223,9 @@ function SideNav() {
 							</div>
 
 						</div>
-						<div className="boxExit  d-flex align-items-center justify-content-center  fixed-bottom ">
+						
+
+						<div className="boxExit  d-flex  fixed-bottom  ms-3">
 							<Button className="button-keluar mb-3 ">Keluar</Button>
 						</div>
 					</div>

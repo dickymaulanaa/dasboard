@@ -145,7 +145,7 @@ color: #253863;
 }
 .btn-hapus {
 	font-family: "Nunito400";
-	height: 25px;
+	height: 27px;
 	width: 80px;
 	font-size: 12px !important;
 	line-height: 21px;
@@ -157,7 +157,7 @@ color: #253863;
 	color: red !important;
 }
 .btn-terapkan {
-	height: 25px;
+	height: 27px;
 	width: 80px;
 	background-color: #253863 !important;
 	font-family: "Nunito400";
@@ -165,6 +165,7 @@ color: #253863;
 	line-height: 21px;
 	letter-spacing: 0em;
 	text-align: left;
+	border: 1px solid #253863 !important;
 }
 .btn-terapkan:hover {
 	background-color: #253863 !important;

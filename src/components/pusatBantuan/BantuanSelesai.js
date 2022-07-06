@@ -5,20 +5,6 @@ import { Pagination, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function BantuanSelesai() {
-	// -------------------  EMPTY STATE
-	// return (
-	// 	<>
-	// 		<div className="tbl-PusatBantuan mx-auto mt-4 px-3 ">
-	// 			<div className="d-flex flex-column justify-content-center align-items-center my-5">
-	// 				<div className="my-2">
-	// 					<img src={maskot} alt="maskot" className="w-75" />
-	// 				</div>
-	// 				<span className="text-center me-5 labelBlmSelesai mb-4">Duh, halaman ini masih bersih nih</span>
-	// 			</div>
-	// 		</div>
-	// 	</>
-	// );
-	// -------------------  EMPTY STATE
 	const [hideAlert, setHideAlert] = useState(true);
 	const [showBantuan, setShowBantuan] = useState(false);
 	const tableBantuan = [
@@ -31,6 +17,20 @@ function BantuanSelesai() {
 		},
 	];
 	const isiBantuan = () => {
+		// -------------------  EMPTY STATE
+		// return (
+		// 	<>
+		// 		<div className="tbl-PusatBantuan mx-auto mt-4 px-3 ">
+		// 			<div className="d-flex flex-column justify-content-center align-items-center my-5">
+		// 				<div className="my-2">
+		// 					<img src={maskot} alt="maskot" className="w-75" />
+		// 				</div>
+		// 				<span className="text-center me-5 labelBlmSelesai mb-4">Duh, halaman ini masih bersih nih</span>
+		// 			</div>
+		// 		</div>
+		// 	</>
+		// );
+		// -------------------  EMPTY STATE
 		return (
 			<div className="infoBuyer">
 				<span className="d-flex justify-content-center mt-4 labelPermohonan">Permohonan Bantuan</span>
@@ -128,29 +128,25 @@ function BantuanSelesai() {
 							);
 						})}
 					</div>
-						<div className="alert-konfirm d-flex justify-content-between p-2 border">
-							<div className="d-flex">
-								<svg
-									className="mt-1"
-									width="20"
-									height="21"
-									viewBox="0 0 20 21"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										fill-rule="evenodd"
-										clip-rule="evenodd"
-										d="M5.52081 2.64585C6.29249 2.58427 7.02508 2.28082 7.61428 1.7787C8.98925 0.606968 11.0115 0.606968 12.3865 1.7787C12.9757 2.28082 13.7083 2.58427 14.48 2.64585C16.2808 2.78955 17.7107 4.21953 17.8544 6.02032C17.916 6.792 18.2195 7.52459 18.7216 8.11379C19.8933 9.48876 19.8933 11.511 18.7216 12.886C18.2195 13.4752 17.916 14.2078 17.8544 14.9795C17.7107 16.7803 16.2808 18.2103 14.48 18.354C13.7083 18.4155 12.9757 18.719 12.3865 19.2211C11.0115 20.3928 8.98925 20.3928 7.61428 19.2211C7.02508 18.719 6.29249 18.4155 5.52081 18.354C3.72002 18.2103 2.29004 16.7803 2.14634 14.9795C2.08476 14.2078 1.78131 13.4752 1.27919 12.886C0.107456 11.511 0.107456 9.48876 1.27919 8.11379C1.78131 7.52459 2.08476 6.792 2.14634 6.02032C2.29004 4.21953 3.72002 2.78955 5.52081 2.64585ZM14.4489 8.94843C14.9175 8.4798 14.9175 7.72 14.4489 7.25137C13.9803 6.78275 13.2205 6.78275 12.7519 7.25137L8.80039 11.2028L7.24892 9.65137C6.78029 9.18274 6.02049 9.18274 5.55186 9.65137C5.08323 10.12 5.08323 10.8798 5.55186 11.3484L7.95186 13.7484C8.42049 14.2171 9.18029 14.2171 9.64892 13.7484L14.4489 8.94843Z"
-										fill="#49C2AE"
-									/>
-								</svg>
+					{/* ALERT KOFIRMASI PENOLAKAN START */}
+					{/* <div className="alert-konfirm d-flex justify-content-between p-2 border">
+						<div className="d-flex">
+							<svg className="mt-1" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M5.52081 2.64585C6.29249 2.58427 7.02508 2.28082 7.61428 1.7787C8.98925 0.606968 11.0115 0.606968 12.3865 1.7787C12.9757 2.28082 13.7083 2.58427 14.48 2.64585C16.2808 2.78955 17.7107 4.21953 17.8544 6.02032C17.916 6.792 18.2195 7.52459 18.7216 8.11379C19.8933 9.48876 19.8933 11.511 18.7216 12.886C18.2195 13.4752 17.916 14.2078 17.8544 14.9795C17.7107 16.7803 16.2808 18.2103 14.48 18.354C13.7083 18.4155 12.9757 18.719 12.3865 19.2211C11.0115 20.3928 8.98925 20.3928 7.61428 19.2211C7.02508 18.719 6.29249 18.4155 5.52081 18.354C3.72002 18.2103 2.29004 16.7803 2.14634 14.9795C2.08476 14.2078 1.78131 13.4752 1.27919 12.886C0.107456 11.511 0.107456 9.48876 1.27919 8.11379C1.78131 7.52459 2.08476 6.792 2.14634 6.02032C2.29004 4.21953 3.72002 2.78955 5.52081 2.64585ZM14.4489 8.94843C14.9175 8.4798 14.9175 7.72 14.4489 7.25137C13.9803 6.78275 13.2205 6.78275 12.7519 7.25137L8.80039 11.2028L7.24892 9.65137C6.78029 9.18274 6.02049 9.18274 5.55186 9.65137C5.08323 10.12 5.08323 10.8798 5.55186 11.3484L7.95186 13.7484C8.42049 14.2171 9.18029 14.2171 9.64892 13.7484L14.4489 8.94843Z"
+									fill="#49C2AE"
+								/>
+							</svg>
 
-								<span className="txt-konfirmasi ">Konfirmasi Penolakan Dokumen telah dikirim</span>
-							</div>
-
-							<Button className="txt-tutup">Tutup</Button>
+							<span className="txt-konfirmasi ">Konfirmasi Penolakan Dokumen telah dikirim</span>
 						</div>
+
+						<Button className="txt-tutup">Tutup</Button>
+					</div> */}
+					{/* ALERT KOFIRMASI PENOLAKAN END */}
+
 					{/* Pagination start */}
 					<div className="d-flex justify-content-end ">
 						<Pagination className="d-flex align-items-center">

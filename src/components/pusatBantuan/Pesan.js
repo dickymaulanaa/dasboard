@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import ModalPenyelesaian from "./ModalPenyelesaian";
 
 function Pesan() {
-     const [showKonfirmasi, setShowKonfirmasi] = useState(false);
+	const [showKonfirmasi, setShowKonfirmasi] = useState(false);
 
 	return (
 		<>
@@ -34,7 +34,7 @@ function Pesan() {
 												fill="#B1B1B1"
 											/>
 										</svg>
-										<span className="breadcumb-label ms-1 mt-1">Tabel Pusat Bantuan</span>
+										<span className="breadcumb-label ms-1 mt-1">Tiket Pusat Bantuan</span>
 									</div>
 								</Link>
 							</li>
@@ -141,9 +141,20 @@ function Pesan() {
 									</div>
 									<div className="box-btn-bantuan d-flex align-items-end mb-3 mt-5">
 										<div className=" d-flex flex-column justify-content-center w-100  align-items-center">
-											<button className="btn-moderasi-bantuan w-50 my-1 py-2" onClick={() => setShowKonfirmasi(true)}>Tandai Selesai</button>
-                                                       <ModalPenyelesaian showKonfirmasiPenyelesaian={showKonfirmasi} closePenyelesaian={() => setShowKonfirmasi(false)}/>
-											<button className="btn-tutup-bantuan w-50 py-2">Tutup</button>
+											<button className="btn-moderasi-bantuan w-50 my-2 py-2" onClick={() => setShowKonfirmasi(true)}>
+												Tandai Selesai
+											</button>
+											<ModalPenyelesaian
+												showKonfirmasiPenyelesaian={showKonfirmasi}
+												closePenyelesaian={() => setShowKonfirmasi(false)}
+											/>
+											<button className="btn-tutup-bantuan w-50 py-2">
+												<Link to="/pusatbantuan" style={{textDecoration:"none", color:"#253863"}}>
+
+												Kembali
+												</Link>
+												
+												</button>
 										</div>
 									</div>
 								</div>
@@ -152,7 +163,7 @@ function Pesan() {
 								<div className="isi-chat">box chat</div>
 								<div className="chat-text d-flex">
 									<div className="w-75 ">
-										<div className="textarea-pesan">
+										<div className="textarea-pesan p-1">
 											<textarea
 												class="form-control"
 												id="exampleFormControlTextarea1"

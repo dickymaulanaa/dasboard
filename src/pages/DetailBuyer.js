@@ -148,7 +148,7 @@ function DetailBuyer() {
 									<input type="text" disabled className="form-control" placeholder="contactus@redbull.com" />
 								</Col>
 							</Row>
-							<div className="labelRekning">
+							<div className="labelRekning basicInfo">
 								<p>Rekening Dana</p>
 							</div>
 							<Row className="  my-3 d-flex align-items-center">

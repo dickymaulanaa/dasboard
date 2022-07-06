@@ -5,32 +5,7 @@ import "../../css/modalHalal.css";
 import SH from "../../image/SH.png";
 
 function IzinDokumen() {
-	// const Dokumen = [
-	// 	{
-	// 		no: "001",
-	// 		namaDokumen: "KTP",
-	// 		status: "Terverifikasi",
-	// 		btn: '<Button className="ds-btn-table p-0 px-3">Lihat Dokumen</Button>',
-	// 	},
-	// 	{
-	// 		no: "002",
-	// 		namaDokumen: "NPWP",
-	// 		status: "Tidak ada dokumen",
-	// 		btn: '<Button className="ds-btn-table p-0 px-3">Lihat Dokumen</Button>',
-	// 	},
-	// 	{
-	// 		no: "003",
-	// 		namaDokumen: "Izin Usaha",
-	// 		status: "Terverifikasi",
-	// 		btn: '<Button className="ds-btn-table p-0 px-3">Lihat Dokumen</Button>',
-	// 	},
-	// 	{
-	// 		no: "004",
-	// 		namaDokumen: "Sertifikat Halal",
-	// 		status: "Ditolak",
-	// 		btn: '<Button onClick={handleShow} className="ds-btn-table p-0 px-3">Lihat Dokumen</Button>',
-	// 	},
-	// ];
+	
 	const [hideAlert, setHideAlert] = useState(true);
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
@@ -87,7 +62,7 @@ function IzinDokumen() {
 				<div className="modalPenolakan">
 					<Modal.Header closeButton>
 						<Modal.Title>
-							<span className="labelModalPenolakan ms-5 ">Konfirmasi Penolakan Dokumen</span>
+							<span className="labelModalPenolakan ms-5  ">Konfirmasi Penolakan Dokumen</span>
 						</Modal.Title>
 					</Modal.Header>
 					<div className="isiModalPenolakan mx-5 d-flex flex-column">
@@ -171,7 +146,7 @@ function IzinDokumen() {
 				<div className="modalHalal">
 					<Modal.Header closeButton>
 						<Modal.Title>
-							<span className="labelModalHalal">Dokumen: Sertifikat Halal</span>
+							<span className="labelModalHalal ">Dokumen: Sertifikat Halal</span>
 						</Modal.Title>
 					</Modal.Header>
 					<div className="isiSertif">
@@ -244,7 +219,7 @@ function IzinDokumen() {
 					<Row className=" w-100">
 						<Col>
 							<div className="d-flex flex-column">
-								<p className="ms-3 mb-0 p-0">Daftar Izin & Dokumen</p>
+								<p className="ms-3 mb-0 p-0 basicInfo">Daftar Izin & Dokumen</p>
 								<span className="ms-3 prd-hintProduk p-0">Lengkapi data izin dan dokumen anda disini</span>
 							</div>
 						</Col>

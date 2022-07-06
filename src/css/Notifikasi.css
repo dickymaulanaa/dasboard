@@ -22,9 +22,9 @@
 
 .backModalNotif {
 	opacity: 1;
-	background-color: transparent;
+	background-color: transparent !important;
     width: auto;
-    
+	
 }
 .dialogModal{
     width: auto;

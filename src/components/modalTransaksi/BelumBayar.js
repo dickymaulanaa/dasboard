@@ -2,7 +2,6 @@ import { Table, Form, Container, Modal, Col, Row } from "react-bootstrap";
 import "../../css/modalTransaksi.css";
 
 function BelumBayar(props) {
-	console.log("PROPS in MODAL", props);
 
 	return (
 		<Modal
@@ -32,8 +31,8 @@ function BelumBayar(props) {
 								</Form.Group>
 								<Form.Group className="mb-3">
 									<Form.Label className="tr-label-trans">Metode Pembayaran</Form.Label>
-									<Row className="tr-img-form w-100 ">
-										<Col className="d-flex align-items-center  tr-placeholder">
+									<Row className="tr-img-form w-100  ms-1">
+										<Col className="d-flex align-items-center  tr-placeholder ">
 											<img
 												src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/1280px-Logo_dana_blue.svg.png"
 												alt="logo dana"
@@ -76,10 +75,10 @@ function BelumBayar(props) {
 							<Col className="d-flex flex-column">
 								<Form.Group className="mb-3 mt-3">
 									<Form.Label className="tr-label-trans">Metode Pengiriman</Form.Label>
-									<Row className="tr-img-form w-100 ">
+									<Row className="tr-img-form w-100 ms-1">
 										<Col className="d-flex align-items-center ">
 											<img src="https://anteraja.id/assets/img/Logo%20Anteraja-New-01.png" alt="logo kurir" />
-											<span className="tr-placeholder mx-2 py-3">(Same Day)</span>
+											<span className="tr-placeholder ms-2  d-flex align-items-center ">(Same Day)</span>
 										</Col>
 									</Row>
 								</Form.Group>

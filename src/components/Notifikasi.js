@@ -34,7 +34,7 @@ function Notifikasi(props) {
 		<Modal
 			show={props.showNotif}
 			onHide={props.closeNotif}
-			dialogClassName="dialogModal white-text"
+			dialogClassName="dialogModal"
 			backdropClassName="backModalNotif  "
 			contentClassName="contentNotif shadow "
 		>

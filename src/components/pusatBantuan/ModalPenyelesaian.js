@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Table, Form, Container, Modal, Col, Row, Button } from "react-bootstrap";
+import { useNavigate } from "react-router";
 import "../../css/pusatBantuan.css";
 
 function ModalPenyelesaian(props) {
+	const navigate = useNavigate()
+	 function handleSubmit() {
+		navigate("./");
+	   }
 	return (
 		<Modal
 			show={props.showKonfirmasiPenyelesaian}
@@ -87,7 +92,7 @@ function ModalPenyelesaian(props) {
 								<button className="mx-2 btn-modal-kembali p-1" onClick={props.closePenyelesaian}>
 									Kembali
 								</button>
-								<button className="btn-modal-konfirmasi p-1">Konfirmasi</button>
+								<button className="btn-modal-konfirmasi p-1" onClick={handleSubmit}>Konfirmasi</button>
 							</div>
 						</div>
 					</div>

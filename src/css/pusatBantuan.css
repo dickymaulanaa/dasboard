@@ -79,7 +79,6 @@
 	border: 1px solid #b6bdcb;
 	border-radius: 8px;
 	cursor: pointer;
-	box-shadow: 3px 2px 3px #b6bdcb;
 }
 .listBantuan:focus,
 .listBantuan:focus {
@@ -220,7 +219,6 @@
 .isi-chat {
 	width: 100%;
 	height: 84%;
-	background-color: red;
 	border: 1px solid #b6bdcb;
 	border-radius: 8px;
 	background-color: #fbfbfb;
@@ -261,6 +259,7 @@
 	resize: none;
 	border: none !important;
 	background-color: #fbfbfb;
+	box-shadow: none !important;
 }
 
 /* MODAL */
