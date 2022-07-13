@@ -1,0 +1,110 @@
+
+.modal-tambahV{
+    width: 50%;
+    background-color: white;
+    z-index: 10000 !important;  
+    position: fixed;
+    margin-top: 43%;
+    border-radius: 12px;
+    padding: 20px;
+    margin-right: 400px;
+    height: 95%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.MisiTable, .MjudulTable{
+    color: #353535;
+    font-family: semiBold;
+    font-size: 13px;
+    font-weight: 400 !important;
+    line-height: 14px !important;
+    letter-spacing: 0.0075em;
+}
+.MjudulTable{
+    color: #353535 !important;
+}
+.iconX{
+    margin-left: -420px;
+    z-index: 10000000 !important; 
+    width: 20px;
+    position: fixed;
+}
+.btnHapusV{
+    background-color: #253863;
+    width: 25%;
+}
+.btnBatalV{
+    background-color: white;
+    border-color: #DC3545;
+    color: #DC3545;
+    width: 25%;
+    margin-left: 20px;
+}
+.modal-yakinHapus{
+    background-color: white;
+    width: 30%;
+    z-index: 10000000 !important; 
+    padding: 20px;
+    position: fixed;
+    margin-top: 500px;
+    margin-right: 500px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.modalShowVo.modal.show{
+    background-color: #444444;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+.modalShowVo .modal-content{
+    position:fixed;
+    width: 50%;
+    margin-top: -20px;
+    height: 98%;
+    margin-left: -10%;
+    padding: 20px;
+    border-radius: 12px;
+}
+.VkananJudul{
+    margin-left: 500px;
+}
+.tabzVo{
+    border-color: white !important;
+    margin-bottom: -30px;
+    font-family: nunito-sans;
+    font-size: 16px;
+    color: #B1B1B1;
+    border: none;
+    margin-top: 20px;
+}
+.table{    
+    margin-top: 10px;
+    width: 100%;
+}
+.form-label{
+    font-size: 16px;
+    font-family: reg;
+    margin-bottom: -10px;
+}
+/* .modal-body{
+    width: 200%;
+} */
+.text-tambahVoucher{
+    color: #253863;
+    font-family: nunito;
+}
+@font-face {
+    font-family: nunito;
+    src: url('../font/Nunito_Sans/NunitoSans-Bold.ttf');
+}
+@font-face {
+    font-family: semiBold;
+    src: url('../font/Nunito_Sans/NunitoSans-SemiBold.ttf');
+}
+@font-face {
+    font-family: reg;
+    src: url('../font/Nunito_Sans/NunitoSans-Regular.ttf');
+}

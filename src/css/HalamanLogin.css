@@ -10,12 +10,28 @@
 
     
 }
-body{
+.Lmodal.modal.show{
     background-image: url('../image/Background.png');
+    background-color: #F1F5FC;
+}
+.Lmodal .modal-content{
+    width: 420px;
+    height: 513px;
+    background-color: white;
+    border-radius: 16px;
+    margin-top: 16%;
+    padding: 50px;
+    margin-left: 5%;
+}
+
+.bodyLogin{
+    padding: 100px;
     background-color: #DEEAFD !important;
     background-size: 80% 110%;
     background-position: center;
     background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }
 
 .logo{
@@ -30,10 +46,10 @@ body{
     color: #3E4094;
     font-family: Nunito-bold;
 }
-.label{
+.Llabel{
     font-size: 16px;
     color: rgba(51, 51, 51, 0.96);
-    font-family: Nunito-bold;
+    font-family: Nunito-semibold;
 }
 .form2{
     margin-top: 23px;
@@ -42,6 +58,7 @@ body{
 }
 .kotakForm{
     height: 54px;
+    border-radius:8px;
 }
 .btnSubmit{
     border-radius: 8px;

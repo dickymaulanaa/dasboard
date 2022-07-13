@@ -1,5 +1,6 @@
 import { Button } from "react-bootstrap";
-import "../css/sidenav.css";
+import "../css/sideNav.css";
+import "../css/HalamanLogin.css";
 import iconTokrum from "../image/icontokrum.png";
 import Dasboard from "./Dasboard";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -8,13 +9,15 @@ import UserSeller from "../pages/UserSeller";
 import DetailBuyer from "../pages/DetailBuyer";
 import DetailSeller from "../pages/DetailSeller";
 import Marketing from "../pages/Marketing";
+import Voucher from "../pages/Voucher";
 import Transaksi from "../pages/Transaksi";
 import Notifikasi from "./Notifikasi";
 import { useState } from "react";
 import PusatBantuan from "../pages/PusatBantuan";
-import PusatBantuanSeller from "../pages/PusatBantuanSeller";
-import PusatBantuanBuyer from "../pages/PusatBantuanBuyer";
 import Pesan from "./pusatBantuan/Pesan";
+import HalamanLogin from "../pages/HalamanLogin";
+import BantuanSelesai from "./pusatBantuan/BantuanSelesai";
+import VerifikasiSeller from "../pages/VerifikasiSeller";
 
 function SideNav() {
 	const [showNotif, setShowNotif] = useState(false)
@@ -23,19 +26,19 @@ function SideNav() {
 			<div className="dasboard d-flex ">
 				<div className="side-nav">
 					<div className="text-center icontokrum  d-flex justify-content-center align-items-center ">
-					<Link to="/">	<img src={iconTokrum} alt="icon" /></Link>
+					<Link to="/dashboard">	<img src={iconTokrum} alt="icon" /></Link>
 					</div>
 					<div className="mt-3 navbtn d-flex flex-column justify-content-center  ">
 						<div className="accordion accordion-flush" id="accordionFlushExample">
 							{/* Dasboard */}
 							<div className="accordion-item">
 								<h2 className="accordion-header " id="flush-headingOne">
-									<Link to="/" style={{ textDecoration: "none" }}>
+									<Link to="/dashboard" style={{ textDecoration: "none" }}>
 										<button
 											className="accordion-button nonV "
 											aria-current="true"
 											type="button"
-											data-bs-toggle="collapse"	
+											data-bs-toggle="collapse"
 											data-bs-target="#flush-collapseOne"
 											aria-expanded="true"
 											aria-controls="flush-collapseOne"
@@ -184,16 +187,20 @@ function SideNav() {
 									data-bs-parent="#accordionFlushExample"
 								>
 									<div className="accordion-body  body-collapse d-flex flex-column">
+										<Link to="/voucher"  style={{ textDecoration: "none" }}>
 										<button type="button" className="listCollapse  ">
 											<ul className="m-0">
 												<li>Voucers</li>
 											</ul>
 										</button>
+										</Link>
+										<Link to="/marketing"  style={{ textDecoration: "none" }}>
 										<button type="button" className="listCollapse">
 											<ul className="m-0">
 												<li>Ads Banner</li>
 											</ul>
 										</button>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -271,15 +278,19 @@ function SideNav() {
 		
 					<div className="Container-fluid isi">
 						<Routes>
-							<Route path="/" element={<Dasboard />} />
+
+							<Route path="/dashboard" element={<Dasboard />} />
+							<Route path="/verifikasiSeller" element={<VerifikasiSeller />} />
 							<Route path="/buyer" element={<UserBuyer />} />
 							<Route path="/buyer/detail" element={<DetailBuyer />} />
 							<Route path="/seller" element={<UserSeller />} />
 							<Route path="/seller/detail" element={<DetailSeller />} />
 							<Route path="/marketing" element={<Marketing />} />
+							<Route path="/voucher" element={<Voucher />} />
 							<Route path="/transaksi" element={<Transaksi />} />
 							<Route path="/pusatbantuan" element={<PusatBantuan/>}/>
 							<Route path="/pusatbantuan/pesan" element={<Pesan/>}/>
+							<Route path="/" element={<HalamanLogin/>}/>
 
 						</Routes>
 					</div>

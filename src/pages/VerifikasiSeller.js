@@ -1,345 +1,301 @@
-import { Table, Container, Button, Modal, Form } from "react-bootstrap";
-import "../css/dasboard.css";
-import "../css/VerifikasiSeller.css";
-import iconBerhasil from "../image/Ellipse 8.png";
 import React from "react";
+import { Form, Modal, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../css/dasboard.css";
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import blueLine from "../image/blueLine.png";
 import linePolos from "../image/linePolos.png";
-import bg from "../image/bg2.png";
+import ceklis from "../image/ceklis.png";
 import iconX from "../image/Icon.png";
+import iconBerhasil from "../image/Ellipse 8.png";
+import bg from "../image/bg2.png";
 
+function VerifikasiSeller() {
+  //modal
+  const [modalShow, setModalShow] = React.useState(false);
+  const [namaForm, setNamaForm] = useState("");
+  const [hidenModal, setHidenModal] = useState(true);
+  const [hidenModalTolak, setModalTolak] = useState(true);
+  const [hidenModalBerhasil, setModalBerhasil] = useState(true)
 
-function Dasboard() {
-	const ProdukTerlaris = [
-		{
-			namaProduk: "Kemeja",
-			jenis: "Fashion Pria",
-			harga: 1300,
-			foto: "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//94/MTA-11816392/oem_kemeja_pria_lengan_panjang_kemeja_flanel_pria_casual_6527_full01_jud1zj75.jpg",
-		},
-		{
-			namaProduk: "Kemeja bagus",
-			jenis: "Fashion Pria",
-			harga: 1400,
-			foto: "https://www.bikin.co/konveksi-baju/wp-content/uploads/2019/11/Kemeja-Kantor-Lengan-Panjang.jpg",
-		},
-		{
-			namaProduk: "Kemeja keren",
-			jenis: "Fashion Pria",
-			harga: 1500,
-			foto: "https://1.bp.blogspot.com/-dxCx33BMkhI/YUvyF_h82gI/AAAAAAAABMM/cmzd-TqHfJkOMGiFUwTVh6kCBIqLt7cqACLcBGAsYHQ/s640/k%2B2.jpg",
-		},
-		{
-			namaProduk: "Kemeja keren",
-			jenis: "Fashion Pria",
-			harga: 1500,
-			foto: "https://1.bp.blogspot.com/-dxCx33BMkhI/YUvyF_h82gI/AAAAAAAABMM/cmzd-TqHfJkOMGiFUwTVh6kCBIqLt7cqACLcBGAsYHQ/s640/k%2B2.jpg",
-		},
-		{
-			namaProduk: "Kemeja keren",
-			jenis: "Fashion Pria",
-			harga: 1500,
-			foto: "https://1.bp.blogspot.com/-dxCx33BMkhI/YUvyF_h82gI/AAAAAAAABMM/cmzd-TqHfJkOMGiFUwTVh6kCBIqLt7cqACLcBGAsYHQ/s640/k%2B2.jpg",
-		},
-	];
+  //form 0
+  const [toggleState, setToggleState] = useState(1);
+  const [formStep, setFormStep] = React.useState(0);
+  const [namaDepan, setNamaDepan] = useState("");
+  const [namaBelakang, setNamaBelakang] = useState("");
+  const [tempatLahir, setTempatLahir] = useState("");
+  const [tanggalLahir, setTanggalLahir] = useState("");
+  const [jenisKelamin, setJenisKelamin] = useState("");
 
-	//modal
-	const [modalShow, setModalShow] = React.useState(false);
-	const [namaForm, setNamaForm] = useState("");
-	const [hidenModal, setHidenModal] = useState(true);
-	const [hidenModalTolak, setModalTolak] = useState(true);
-    const [x, setX] = useState(false);
+  const [prov, setProvinsi] = useState("");
+  const [kotaKab, setKota] = useState("");
+  const [kec, setKecamatan] = useState("");
+  const [kodePos, setKodePos] = useState("");
+  const [alamatLengkap, setAlamat] = useState("");
+  const [noKtp, setNoKtp] = useState("");
+  const [kel, setKel] = useState("");
 
-	//form 0
-	const [toggleState, setToggleState] = useState(1);
-	const [formStep, setFormStep] = React.useState(0);
-	const [namaDepan, setNamaDepan] = useState("");
-	const [namaBelakang, setNamaBelakang] = useState("");
-	const [tempatLahir, setTempatLahir] = useState("");
-	const [tanggalLahir, setTanggalLahir] = useState("");
-	const [jenisKelamin, setJenisKelamin] = useState("");
-  
-	const [prov, setProvinsi] = useState("");
-	const [kotaKab, setKota] = useState("");
-	const [kec, setKecamatan] = useState("");
-	const [kodePos, setKodePos] = useState("");
-	const [alamatLengkap, setAlamat] = useState("");
-	const [noKtp, setNoKtp] = useState("");
-	const [kel, setKel] = useState("");
-  
-	//form 1
-	const [uploadFotoUsaha, setFotoUsaha] = useState("");
-	const [KepemilikanUsaha, setKepemilikanUsaha] = useState("");
-	const [website, setWebsite] = useState("");
-	const [instagram, setInstagram] = useState("");
-	const [facebook, setFacebook] = useState("");
-	const [twitter, setTwitter] = useState("");
-	const [tiktok, setTiktok] = useState("");
-	const [kategori, setKategoriUsaha] = useState("");
-  
-	//form 2
-	const [Npwp, setNpwp] = useState("");
-	const [sertifikatHalal, setSertifikatHalal] = useState("");
-	const [sertifikatNIB, setSertifikatNIB] = useState("");
-	const [halal, setHalal] = useState(true);
-	const [nib, setNIB] = useState(true);
-  
-	//form 3
-	const [namaBrand, setnamaBrand] = useState("");
-	const [haki, setHaki] = useState("");
-  
-	//form bank
-	const [namaBank, setNamaBank] = useState("");
-	const [pemilikRek, setPemilikRek] = useState("");
-	const [noRek, setNoRek] = useState("");
-	//modal
+  //form 1
+  const [uploadFotoUsaha, setFotoUsaha] = useState("");
+  const [KepemilikanUsaha, setKepemilikanUsaha] = useState("");
+  const [website, setWebsite] = useState("");
+  const [instagram, setInstagram] = useState("");
+  const [facebook, setFacebook] = useState("");
+  const [twitter, setTwitter] = useState("");
+  const [tiktok, setTiktok] = useState("");
+  const [kategori, setKategoriUsaha] = useState("");
 
-	const backFormStep2 = () => {
-		setFormStep(0);
-	  };
-	  const backFormStep3 = () => {
-		setFormStep(1);
-	  };
-	  const backFormStep4 = () => {
-		setFormStep(4);
-	  };
-	  const backFormStep5 = () => {
-		setFormStep(3);
-	  };
-	  
-  
-	//form 0
-	const completeFormStep0 = () => {
-	  setFormStep(1);
-	  setModalShow(true);
-	};
-  
-	//form 1
-	const completeFormStep1 = () => {
-	  setFormStep(2);
-	};
-  
-	//form 2
-	const completeFormStep2 = () => {
-	  setFormStep(3);
-	};
-  
-	//form 3
-	const completeFormStep3 = () => {
-	  setFormStep(5);
-	};
-  
-	//form 4
-	const completeFormStep4 = () => {
-	  setFormStep(5);
-	};
-	//form last/5
-	const completeFormStepLast = () => {
-	  setHidenModal(false);
-	  setTimeout(() => {
-		setHidenModal(true);
-	  }, 5000);
-	};
-  
-	const completeFormStepTolak2 = () => {
-	  setModalTolak(false);
-	  setTimeout(() => {
-		setModalTolak(true);
-	  }, 5000);
-	};
-  
-	const completeFormStepTolak = () => {
-	  setFormStep(6);
-	};
-  
-	const setelahStep2 = () => {
-	  setFormStep(4);
-	};
-  
-	function changeNamaDepan(e) {
-	  const value = e.target.value;
-	  setNamaDepan(value);
-	}
-	function changeNamaBank(e) {
-	  const value = e.target.value;
-	  setNamaBank(value);
-	}
-  
-	function changeNoRek(e) {
-	  const value = e.target.value;
-	  setNoRek(value);
-	}
-  
-	function changePemilikRek(e) {
-	  const value = e.target.value;
-	  setPemilikRek(value);
-	}
-  
-	function changeNamaDepan(e) {
-	  const value = e.target.value;
-	  setNamaDepan(value);
-	}
-  
-	function changeNamaBelakang(e) {
-	  const value = e.target.value;
-	  setNamaBelakang(value);
-	}
-  
-	function changeTempatLahir(e) {
-	  const value = e.target.value;
-	  setTempatLahir(value);
-	}
-  
-	function changeAlamatLengkap(e) {
-	  const value = e.target.value;
-	  setAlamat(value);
-	}
-  
-	function changeTanggalLahir(e) {
-	  const value = e.target.value;
-	  setTanggalLahir(value);
-	}
-	function changeJenisKelamin(e) {
-	  const value = e.target.value;
-	  setJenisKelamin(value);
-	}
-  
-	function changeProv(e) {
-	  const value = e.target.value;
-	  setProvinsi(value);
-	}
-  
-	function changeKotaKab(e) {
-	  const value = e.target.value;
-	  setKota(value);
-	}
-  
-	function changeKec(e) {
-	  const value = e.target.value;
-	  setKecamatan(value);
-	}
-  
-	function changeKel(e) {
-	  const value = e.target.value;
-	  setKel(value);
-	}
-  
-	function changeKota(e) {
-	  const value = e.target.value;
-	  setKota(value);
-	}
-	function changeKecamatan(e) {
-	  const value = e.target.value;
-	  setKecamatan(value);
-	}
-  
-	function changeKodePos(e) {
-	  const value = e.target.value;
-	  setKodePos(value);
-	}
-	function changeAlamat(e) {
-	  const value = e.target.value;
-	  setAlamat(value);
-	}
-	function changeNoKtp(e) {
-	  const value = e.target.value;
-	  setNoKtp(value);
-	}
-	function changeFotoUsaha(e) {
-	  const value = e.target.value;
-	  setFotoUsaha(value);
-	}
-  
-	function changeNpwp(e) {
-	  const value = e.target.value;
-	  setNpwp(value);
-	}
-  
-	function changeWebsite(e) {
-	  const value = e.target.value;
-	  setWebsite(value);
-	}
-  
-	function changeFacebook(e) {
-	  const value = e.target.value;
-	  setFacebook(value);
-	}
-  
-	function changeInstagram(e) {
-	  const value = e.target.value;
-	  setInstagram(value);
-	}
-  
-	function changeTiktok(e) {
-	  const value = e.target.value;
-	  setTiktok(value);
-	}
-  
-	function changeTwitter(e) {
-	  const value = e.target.value;
-	  setTwitter(value);
-	}
-  
-	function changeKategoriUsaha(e) {
-	  const value = e.target.value;
-	  setKategoriUsaha(value);
-	}
-	function changeKepemilikanUsaha(e) {
-	  const value = e.target.value;
-	  setKepemilikanUsaha(value);
-	}
-	function changenamaBrand(e) {
-	  const value = e.target.value;
-	  setnamaBrand(value);
-	}
-	function changeNpwp(e) {
-	  const value = e.target.value;
-	  setNpwp(value);
-	}
-	function changeHaki(e) {
-	  const value = e.target.value;
-	  setHaki(value);
-	}
-	function changeSertifikatHalal(e) {
-	  const value = e.target.value;
-	  setSertifikatHalal(value);
-	}
-	function changeSertifikatNIB(e) {
-	  const value = e.target.value;
-	  setSertifikatNIB(value);
-	}
-  
-	const [show, setShow] = useState(false);
-  
-	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
-  
+  //form 2
+  const [Npwp, setNpwp] = useState("");
+  const [sertifikatHalal, setSertifikatHalal] = useState("");
+  const [sertifikatNIB, setSertifikatNIB] = useState("");
+  const [halal, setHalal] = useState(true);
+  const [nib, setNIB] = useState(true);
 
-	function clickVerif(){
-		if(show==false){
-			setShow(true)
-		}
-		else{
-			setShow(false)
-		}
-	}
+  //form 3
+  const [namaBrand, setnamaBrand] = useState("");
+  const [haki, setHaki] = useState("");
 
+  //form bank
+  const [namaBank, setNamaBank] = useState("");
+  const [pemilikRek, setPemilikRek] = useState("");
+  const [noRek, setNoRek] = useState("");
+  //modal
 
-	return (
-		<Container fluid className="pb-5">
-			<div className="VKpopup-berhasil" hidden={hidenModalTolak}>
-				<Modal.Dialog>
-				<Modal.Body>
-					<img src={iconBerhasil} alt="berhasil" className="icon-berhasil" />
-					<p className="text-tolak">Penolakan Seller Berhasil</p>
-				</Modal.Body>
-				</Modal.Dialog>
-			</div>
+  //form 0
+  const completeFormStep0 = () => {
+    setFormStep(1);
+    setModalShow(true);
+  };
 
-			<Modal className="VKmodal" show={show} onHide={handleClose}>
-			<img src={iconX} onClick={handleClose} hidden={x} className="iconCloseVS" />
+  //form 1
+  const completeFormStep1 = () => {
+    setFormStep(2);
+  };
 
+  //form 2
+  const completeFormStep2 = () => {
+    setFormStep(3);
+  };
+
+  //form 3
+  const completeFormStep3 = () => {
+    setFormStep(5);
+  };
+
+  //form 4
+  const completeFormStep4 = () => {
+    setFormStep(5);
+  };
+  //form last/5
+  const completeFormStepLast = () => {
+    setHidenModal(false);
+    setTimeout(() => {
+      setHidenModal(true);
+    }, 5000);
+  };
+
+  const completeFormStepVerif = () => {
+    setModalBerhasil(false);
+    setTimeout(() => {
+      setModalBerhasil(true);
+    }, 5000);
+  };
+
+  const completeFormStepTolak2 = () => {
+    setModalTolak(false);
+    setTimeout(() => {
+      setModalTolak(true);
+    }, 5000);
+  };
+
+  const completeFormStepTolak = () => {
+    setFormStep(6);
+  };
+
+  const setelahStep2 = () => {
+    setFormStep(4);
+  };
+
+  function changeNamaDepan(e) {
+    const value = e.target.value;
+    setNamaDepan(value);
+  }
+  function changeNamaBank(e) {
+    const value = e.target.value;
+    setNamaBank(value);
+  }
+
+  function changeNoRek(e) {
+    const value = e.target.value;
+    setNoRek(value);
+  }
+
+  function changePemilikRek(e) {
+    const value = e.target.value;
+    setPemilikRek(value);
+  }
+
+  function changeNamaDepan(e) {
+    const value = e.target.value;
+    setNamaDepan(value);
+  }
+
+  function changeNamaBelakang(e) {
+    const value = e.target.value;
+    setNamaBelakang(value);
+  }
+
+  function changeTempatLahir(e) {
+    const value = e.target.value;
+    setTempatLahir(value);
+  }
+
+  function changeAlamatLengkap(e) {
+    const value = e.target.value;
+    setAlamat(value);
+  }
+
+  function changeTanggalLahir(e) {
+    const value = e.target.value;
+    setTanggalLahir(value);
+  }
+  function changeJenisKelamin(e) {
+    const value = e.target.value;
+    setJenisKelamin(value);
+  }
+
+  function changeProv(e) {
+    const value = e.target.value;
+    setProvinsi(value);
+  }
+
+  function changeKotaKab(e) {
+    const value = e.target.value;
+    setKota(value);
+  }
+
+  function changeKec(e) {
+    const value = e.target.value;
+    setKecamatan(value);
+  }
+
+  function changeKel(e) {
+    const value = e.target.value;
+    setKel(value);
+  }
+
+  function changeKota(e) {
+    const value = e.target.value;
+    setKota(value);
+  }
+  function changeKecamatan(e) {
+    const value = e.target.value;
+    setKecamatan(value);
+  }
+
+  function changeKodePos(e) {
+    const value = e.target.value;
+    setKodePos(value);
+  }
+  function changeAlamat(e) {
+    const value = e.target.value;
+    setAlamat(value);
+  }
+  function changeNoKtp(e) {
+    const value = e.target.value;
+    setNoKtp(value);
+  }
+  function changeFotoUsaha(e) {
+    const value = e.target.value;
+    setFotoUsaha(value);
+  }
+
+  function changeNpwp(e) {
+    const value = e.target.value;
+    setNpwp(value);
+  }
+
+  function changeWebsite(e) {
+    const value = e.target.value;
+    setWebsite(value);
+  }
+
+  function changeFacebook(e) {
+    const value = e.target.value;
+    setFacebook(value);
+  }
+
+  function changeInstagram(e) {
+    const value = e.target.value;
+    setInstagram(value);
+  }
+
+  function changeTiktok(e) {
+    const value = e.target.value;
+    setTiktok(value);
+  }
+
+  function changeTwitter(e) {
+    const value = e.target.value;
+    setTwitter(value);
+  }
+
+  function changeKategoriUsaha(e) {
+    const value = e.target.value;
+    setKategoriUsaha(value);
+  }
+  function changeKepemilikanUsaha(e) {
+    const value = e.target.value;
+    setKepemilikanUsaha(value);
+  }
+  function changenamaBrand(e) {
+    const value = e.target.value;
+    setnamaBrand(value);
+  }
+  function changeNpwp(e) {
+    const value = e.target.value;
+    setNpwp(value);
+  }
+  function changeHaki(e) {
+    const value = e.target.value;
+    setHaki(value);
+  }
+  function changeSertifikatHalal(e) {
+    const value = e.target.value;
+    setSertifikatHalal(value);
+  }
+  function changeSertifikatNIB(e) {
+    const value = e.target.value;
+    setSertifikatNIB(value);
+  }
+
+  const [show, setShow] = useState(true);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <div className="body">
+      <div className="VKpopup-berhasil" hidden={hidenModalTolak}>
+        <Modal.Dialog>
+          <Modal.Body>
+            <img src={iconBerhasil} alt="berhasil" className="icon-berhasil" />
+            <p className="text-tolak">Penolakan Seller Berhasil</p>
+          </Modal.Body>
+        </Modal.Dialog>
+      </div>
+
+      <div className="VKpopup-berhasilVerif" hidden={hidenModalBerhasil}>
+        <Modal.Dialog>
+          <Modal.Body>
+            <img src={iconBerhasil} alt="berhasil" className="icon-berhasil" />
+            <p className="text-tolak">Seller Berhasil Diverifikasi</p>
+          </Modal.Body>
+        </Modal.Dialog>
+      </div>
+
+      <Modal className="VKmodal" show={show} onHide={handleClose}>
         <form className="formModal">
           {formStep === 0 && (
             <section className="sec">
@@ -350,7 +306,7 @@ function Dasboard() {
                   <div className="step-1">
                     <div className="container">
                       <h5
-                        className="kotak-nomor rounded  text-center pt-2 text-light "
+                        className="kotak-nomor rounded  text-center pt-2 text-light shadow"
                         style={{
                           width: "40px",
                           height: "40px",
@@ -359,7 +315,7 @@ function Dasboard() {
                       >
                         1
                       </h5>
-                      <h5 className="txt-judul text-center">Identitas Pemilik</h5>
+                      <h5 className="txt-on text-center">Identitas Pemilik</h5>
                     </div>
                   </div>
 
@@ -368,7 +324,7 @@ function Dasboard() {
                   <div className="steps2">
                     <div className="container">
                       <h5
-                        className=" kotak-nomor rounded  pt-2 text-center "
+                        className=" kotak-nomor rounded  pt-2 text-center shadow"
                         style={{
                           width: "40px",
                           height: "40px",
@@ -390,7 +346,7 @@ function Dasboard() {
                 <div className="steps3">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  pt-2 text-center "
+                      className=" kotak-nomor rounded  pt-2 text-center shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -411,7 +367,7 @@ function Dasboard() {
                 <div className="steps4">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded pt-2 text-center "
+                      className=" kotak-nomor rounded pt-2 text-center shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -432,7 +388,7 @@ function Dasboard() {
                 <div className="steps5">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  pt-2 text-center "
+                      className=" kotak-nomor rounded  pt-2 text-center shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -453,7 +409,7 @@ function Dasboard() {
 
               <div class="form-row d-flex justify-content-center">
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh1">Nama Depan</label>
+                  <label for="contoh1">Nama Depan</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -466,11 +422,11 @@ function Dasboard() {
                     id="validationDefault01"
                     placeholder="Nama Lengkap Anda"
                     onChange={changeNamaDepan}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh2">Nama Belakang</label>
+                  <label for="contoh2">Nama Belakang</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -482,7 +438,7 @@ function Dasboard() {
                     placeholder="Nama Belakang Anda"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
               </div>
@@ -510,7 +466,7 @@ function Dasboard() {
 
                 <div class="form-row d-flex" style={{ marginTop: "-1px" }}>
                   <div className="ktp form-group col-md-5">
-                    <label className="labelVS"for="contoh1">No. KTP </label>
+                    <label for="contoh1">No. KTP </label>
                     <sup className="required" style={{ color: "red" }}>
                       *
                     </sup>
@@ -522,7 +478,7 @@ function Dasboard() {
                       placeholder="Masukan No.KTP"
                       value={noKtp}
                       onChange={changeNoKtp}
-                      
+                      required
                     />
                   </div>
                 </div>
@@ -530,7 +486,7 @@ function Dasboard() {
 
               <div class="form-row d-flex justify-content-center">
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh1">Tanggal Lahir</label>
+                  <label for="contoh1">Tanggal Lahir</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -543,11 +499,11 @@ function Dasboard() {
                     id="validationDefault01"
                     onfocus="(this.type='date')"
                     onChange={changeNamaDepan}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh2">Foto KTP</label>
+                  <label for="contoh2">Foto KTP</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -559,14 +515,14 @@ function Dasboard() {
                     placeholder="Masukan Foto KTP"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
               </div>
 
               <div class="form-row d-flex justify-content-center">
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh1">Alamat Lengkap</label>
+                  <label for="contoh1">Alamat Lengkap</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -579,11 +535,11 @@ function Dasboard() {
                     id="validationDefault01"
                     placeholder="Masukan Alamat Lengkap"
                     onChange={changeNamaDepan}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh2">Kota / Kabupaten</label>
+                  <label for="contoh2">Kota / Kabupaten</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -595,14 +551,14 @@ function Dasboard() {
                     placeholder="Kota / Kabupaten"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
               </div>
 
               <div class="form-row d-flex justify-content-center">
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh1">Kecamatan</label>
+                  <label for="contoh1">Kecamatan</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -615,11 +571,11 @@ function Dasboard() {
                     id="validationDefault01"
                     placeholder="Kecamatan"
                     onChange={changeNamaDepan}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh2">Kelurahan</label>
+                  <label for="contoh2">Kelurahan</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -631,14 +587,14 @@ function Dasboard() {
                     placeholder="Kelurahan"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
               </div>
 
               <div class="form-row d-flex justify-content-center">
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh1">Provinsi</label>
+                  <label for="contoh1">Provinsi</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -651,11 +607,11 @@ function Dasboard() {
                     id="validationDefault01"
                     placeholder="Provinsi"
                     onChange={changeNamaDepan}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh2">Kode Pos</label>
+                  <label for="contoh2">Kode Pos</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -667,37 +623,19 @@ function Dasboard() {
                     placeholder="Kode Pos"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
               </div>
 
               <div class="col-12 mt-4 d-flex justify-content-end pe-5">
-			  <button
-                  onClick={completeFormStep0}
-                  class="btnBack btn  pt-2"
-                  style={{
-                    width: "100px",
-                    height: "44px",
-                    color:"#253863",
-					marginRight:"470px",
-					fontSize:"16px",
-					marginTop:"18px"
-
-                  }}
-                  type="submit"
-                >
-                  Kembali
-                </button>
                 <button
-				onClick={completeFormStep0}
-                  class="btn text-light pt-2"
+                  onClick={completeFormStep0}
+                  class="btn text-light"
                   style={{
                     width: "150px",
                     height: "44px",
                     backgroundColor: "#253863",
-					marginTop:"18px"
-
                   }}
                   type="submit"
                 >
@@ -708,7 +646,7 @@ function Dasboard() {
           )}
 
           {formStep === 1 && (
-            <section className="sec">
+            <section>
               <h1 className="judulVerif">Verifikasi Seller</h1>
 
               <div className="tabsss d-flex">
@@ -716,7 +654,7 @@ function Dasboard() {
                   <div className="step-1">
                     <div className="container">
                       <h5
-                        className=" kotak-nomor rounded  pt-2 text-center "
+                        className=" kotak-nomor rounded  pt-2 text-center shadow"
                         style={{
                           width: "40px",
                           height: "40px",
@@ -726,7 +664,7 @@ function Dasboard() {
                       >
                         1
                       </h5>
-                      <h5 className="txt-judul text-center">Identitas Pemilik</h5>
+                      <h5 className="txt-on text-center">Identitas Pemilik</h5>
                     </div>
                   </div>
 
@@ -735,7 +673,7 @@ function Dasboard() {
                   <div className="steps2">
                     <div className="container">
                       <h5
-                        className="kotak-nomor rounded  text-center pt-2 "
+                        className="kotak-nomor rounded  text-center pt-2 shadow"
                         style={{
                           width: "40px",
                           height: "40px",
@@ -757,7 +695,7 @@ function Dasboard() {
                 <div className="steps3">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  pt-2 text-center "
+                      className=" kotak-nomor rounded  pt-2 text-center shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -778,7 +716,7 @@ function Dasboard() {
                 <div className="steps4">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  pt-2 text-center"
+                      className=" kotak-nomor rounded  pt-2 text-center shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -799,7 +737,7 @@ function Dasboard() {
                 <div className="steps5">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  pt-2 text-center "
+                      className=" kotak-nomor rounded  pt-2 text-center shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -820,7 +758,7 @@ function Dasboard() {
 
               <div class="form-row d-flex justify-content-center">
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh2">Foto Tempat Usaha</label>
+                  <label for="contoh2">Foto Tempat Usaha</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -832,11 +770,11 @@ function Dasboard() {
                     placeholder="Nama Belakang Anda"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh2">Kota / Kabupaten</label>
+                  <label for="contoh2">Kota / Kabupaten</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -848,14 +786,14 @@ function Dasboard() {
                     placeholder="Kota / Kabupaten"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
               </div>
 
               <div class="form-row d-flex justify-content-center">
                 <div class="form-group col-md-5 ">
-                  <label  className="labelVS" for="contoh2">Kategori Usaha</label>
+                  <label for="contoh2">Kategori Usaha</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -867,11 +805,11 @@ function Dasboard() {
                     placeholder="Nama Belakang Anda"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  {/* <label className="labelVS"for="contoh2">Kota / Kabupaten</label>
+                  {/* <label for="contoh2">Kota / Kabupaten</label>
                         <sup className="required" style={{ color: "red" }}>*</sup>
                         <input style={{ backgroundColor: "#F0F4FA"}} type="text" class="form-control" id="contoh2" placeholder="Kota / Kabupaten" value={namaBelakang} onChange={changeNamaBelakang} required /> */}
                 </div>
@@ -883,7 +821,7 @@ function Dasboard() {
 
               <div class="form-row d-flex justify-content-center">
                 <div class="form-group col-md-5 ">
-                  <label  className="labelVS" for="contoh2">Website</label>
+                  <label for="contoh2">Website</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -895,11 +833,11 @@ function Dasboard() {
                     placeholder="Masukan Website Anda"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  <label  className="labelVS" for="contoh2">Facebook</label>
+                  <label for="contoh2">Facebook</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -911,14 +849,14 @@ function Dasboard() {
                     placeholder="Masukan Facebook Anda"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
               </div>
 
               <div class="form-row d-flex justify-content-center">
                 <div class="form-group col-md-5 ">
-                  <label  className="labelVS" for="contoh2">Instagram</label>
+                  <label for="contoh2">Instagram</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -930,11 +868,11 @@ function Dasboard() {
                     placeholder="Masukan Instagram Anda"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh2">Twitter</label>
+                  <label for="contoh2">Twitter</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -946,14 +884,14 @@ function Dasboard() {
                     placeholder="Masukan Twitter Anda"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
               </div>
 
               <div class="form-row d-flex justify-content-center">
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS" for="contoh2">Tiktok</label>
+                  <label for="contoh2">Tiktok</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -965,39 +903,23 @@ function Dasboard() {
                     placeholder="Masukan Tiktok Anda"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  {/* <label className="labelVS"for="contoh2">Facebook</label>
+                  {/* <label for="contoh2">Facebook</label>
                         <sup className="required" style={{ color: "red" }}>*</sup>
                         <input style={{ backgroundColor: "#F0F4FA"}} type="text" class="form-control" id="contoh2" placeholder="Kota / Kabupaten" value={namaBelakang} onChange={changeNamaBelakang} required /> */}
                 </div>
               </div>
 
               <div class="col-12 mt-4 d-flex justify-content-end pe-5">
-			  <button
-                  onClick={backFormStep2}
-                  class="btnBack btn  pt-2"
-                  style={{
-                    width: "100px",
-                    height: "44px",
-                    color:"#253863",
-					marginTop:"30px",
-					marginRight:"470px",
-					fontSize:"16px"
-                  }}
-                  type="submit"
-                >
-                  Kembali
-                </button>
                 <button
                   onClick={setelahStep2}
                   class="btn text-light"
                   style={{
                     width: "150px",
                     height: "44px",
-					marginTop:"30px",
                     backgroundColor: "#253863",
                   }}
                   type="submit"
@@ -1009,7 +931,7 @@ function Dasboard() {
           )}
 
           {formStep === 3 && (
-            <section className="sec">
+            <section>
               <h1 className="judulVerif">Verifikasi Seller</h1>
 
               <div className="tabsss d-flex">
@@ -1017,7 +939,7 @@ function Dasboard() {
                   <div className="step-1">
                     <div className="container">
                       <h5
-                        className=" kotak-nomor rounded  pt-2 text-center "
+                        className=" kotak-nomor rounded  pt-2 text-center shadow"
                         style={{
                           width: "40px",
                           height: "40px",
@@ -1027,7 +949,7 @@ function Dasboard() {
                       >
                         1
                       </h5>
-                      <h5 className="txt-judul text-center">Identitas Pemilik</h5>
+                      <h5 className="txt-on text-center">Identitas Pemilik</h5>
                     </div>
                   </div>
 
@@ -1036,7 +958,7 @@ function Dasboard() {
                   <div className="steps2">
                     <div className="container">
                       <h5
-                        className=" kotak-nomor rounded  pt-2 text-center "
+                        className=" kotak-nomor rounded  pt-2 text-center shadow"
                         style={{
                           width: "40px",
                           height: "40px",
@@ -1058,7 +980,7 @@ function Dasboard() {
                 <div className="steps3">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  pt-2 text-center "
+                      className=" kotak-nomor rounded  pt-2 text-center shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -1079,7 +1001,7 @@ function Dasboard() {
                 <div className="steps4">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  text-center pt-2 "
+                      className=" kotak-nomor rounded  text-center pt-2 shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -1100,7 +1022,7 @@ function Dasboard() {
                 <div className="steps5">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  pt-2 text-center "
+                      className=" kotak-nomor rounded  pt-2 text-center shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -1124,7 +1046,7 @@ function Dasboard() {
                 style={{ marginTop: "50px" }}
               >
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS" for="contoh1">Nama Bank</label>
+                  <label for="contoh1">Nama Bank</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -1137,11 +1059,11 @@ function Dasboard() {
                     id="validationDefault01"
                     placeholder="Bank Mandiri"
                     onChange={changeNamaDepan}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS" for="contoh2">Nama Pemilik Rekening Bank</label>
+                  <label for="contoh2">Nama Pemilik Rekening Bank</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -1153,7 +1075,7 @@ function Dasboard() {
                     placeholder="Ramli Ramadan"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
               </div>
@@ -1163,7 +1085,7 @@ function Dasboard() {
                 style={{ marginTop: "10px" }}
               >
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS" for="contoh1">Nomor Rekening Bank</label>
+                  <label for="contoh1">Nomor Rekening Bank</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -1176,31 +1098,17 @@ function Dasboard() {
                     id="validationDefault01"
                     placeholder="77372912810"
                     onChange={changeNamaDepan}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  {/* <label className="labelVS"for="contoh2">Nama Belakang</label>
+                  {/* <label for="contoh2">Nama Belakang</label>
                       <sup className="required" style={{ color: "red" }}>*</sup>
                       <input style={{ backgroundColor: "#F0F4FA"}} type="text" class="form-control" id="contoh2" placeholder="Nama Belakang Anda" value={namaBelakang} onChange={changeNamaBelakang} required /> */}
                 </div>
               </div>
 
               <div class="col-12 mt-4 d-flex justify-content-end pe-5">
-			  <button
-                  onClick={backFormStep4}
-                  class="btnBack btn  pt-2"
-                  style={{
-                    width: "100px",
-                    height: "44px",
-                    color:"#253863",
-					marginRight:"470px",
-					marginTop:"232px"
-                  }}
-                  type="submit"
-                >
-                  Kembali
-                </button>
                 <button
                   onClick={completeFormStep4}
                   class="btn text-light"
@@ -1208,8 +1116,7 @@ function Dasboard() {
                     width: "150px",
                     height: "44px",
                     backgroundColor: "#253863",
-                    marginTop: "232px",
-					
+                    marginTop: "200px",
                   }}
                   type="submit"
                 >
@@ -1221,7 +1128,7 @@ function Dasboard() {
 
           {/* //BADAN USAHA// */}
           {formStep === 4 && (
-            <section className="sec">
+            <section>
               <h1 className="judulVerif">Verifikasi Seller</h1>
 
               <div className="tabsss d-flex">
@@ -1229,7 +1136,7 @@ function Dasboard() {
                   <div className="step-1">
                     <div className="container">
                       <h5
-                        className=" kotak-nomor rounded  pt-2 text-center "
+                        className=" kotak-nomor rounded  pt-2 text-center shadow"
                         style={{
                           width: "40px",
                           height: "40px",
@@ -1239,7 +1146,7 @@ function Dasboard() {
                       >
                         1
                       </h5>
-                      <h5 className="txt-judul text-center">Identitas Pemilik</h5>
+                      <h5 className="txt-on text-center">Identitas Pemilik</h5>
                     </div>
                   </div>
 
@@ -1248,7 +1155,7 @@ function Dasboard() {
                   <div className="steps2">
                     <div className="container">
                       <h5
-                        className=" kotak-nomor rounded  pt-2 text-center "
+                        className=" kotak-nomor rounded  pt-2 text-center shadow"
                         style={{
                           width: "40px",
                           height: "40px",
@@ -1270,7 +1177,7 @@ function Dasboard() {
                 <div className="steps3">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  text-center pt-2 "
+                      className=" kotak-nomor rounded  text-center pt-2 shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -1291,7 +1198,7 @@ function Dasboard() {
                 <div className="steps4">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  pt-2 text-center "
+                      className=" kotak-nomor rounded  pt-2 text-center shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -1312,7 +1219,7 @@ function Dasboard() {
                 <div className="steps5">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  pt-2 text-center "
+                      className=" kotak-nomor rounded  pt-2 text-center shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -1336,7 +1243,7 @@ function Dasboard() {
                 style={{ marginTop: "50px" }}
               >
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"  for="contoh1">Nomor NPWP</label>
+                  <label for="contoh1">Nomor NPWP</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -1349,11 +1256,11 @@ function Dasboard() {
                     id="validationDefault01"
                     placeholder="Nama Lengkap Anda"
                     onChange={changeNamaDepan}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS" for="contoh2">Foto Sertifikat Halal</label>
+                  <label for="contoh2">Foto Sertifikat Halal</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -1365,7 +1272,7 @@ function Dasboard() {
                     placeholder="Nama Belakang Anda"
                     value={namaBelakang}
                     onChange={changeNamaBelakang}
-                    
+                    required
                   />
                 </div>
               </div>
@@ -1375,7 +1282,7 @@ function Dasboard() {
                 style={{ marginTop: "10px" }}
               >
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh1">Nomor Induk Usaha</label>
+                  <label for="contoh1">Nomor Induk Usaha</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -1388,11 +1295,11 @@ function Dasboard() {
                     id="validationDefault01"
                     placeholder="Nama Lengkap Anda"
                     onChange={changeNamaDepan}
-                    
+                    required
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  {/* <label className="labelVS"className="labelVS"for="contoh2">Nama Belakang</label>
+                  {/* <label for="contoh2">Nama Belakang</label>
                       <sup className="required" style={{ color: "red" }}>*</sup>
                       <input style={{ backgroundColor: "#F0F4FA"}} type="text" class="form-control" id="contoh2" placeholder="Nama Belakang Anda" value={namaBelakang} onChange={changeNamaBelakang} required /> */}
                 </div>
@@ -1402,27 +1309,12 @@ function Dasboard() {
                       <div class="col-4 d-flex justify-content-start ms-5 ps-3">
                         <button onClick={backFormStep4} class="btn text-light" style={{ width: "30%", backgroundColor: "#f16e60" }} type="button">Kembali</button>
                       </div>
+
                       <div class="col-7 d-flex justify-content-end ms-1 ps-1 pe-3" style={{ left: "30px" }}>
                         <button onClick={completeFormStep4} class="btn text-light" style={{ width: "20%", backgroundColor: "#f16e60" }} type="submit">Lanjut</button>
                       </div>
                     </div> */}
               <div class="col-12 mt-4 d-flex justify-content-end pe-5">
-				
-			  <button
-                  onClick={backFormStep3}
-                  class="btnBack btn  pt-2"
-                  style={{
-                    width: "100px",
-                    height: "44px",
-                    color:"#253863",
-					marginRight:"470px",
-					marginTop:"230px",
-					fontSize:"16px"
-                  }}
-                  type="submit"
-                >
-                  Kembali
-                </button>
                 <button
                   onClick={completeFormStep2}
                   class="btn text-light"
@@ -1430,7 +1322,7 @@ function Dasboard() {
                     width: "150px",
                     height: "44px",
                     backgroundColor: "#253863",
-                    marginTop: "230px",
+                    marginTop: "195px",
                   }}
                   type="submit"
                 >
@@ -1441,7 +1333,7 @@ function Dasboard() {
           )}
 
           {formStep === 5 && (
-            <section className="sec">
+            <section>
               <h1 className="judulVerif">Verifikasi Seller</h1>
 
               <div className="tabsss d-flex">
@@ -1449,7 +1341,7 @@ function Dasboard() {
                   <div className="step-1">
                     <div className="container">
                       <h5
-                        className=" kotak-nomor rounded  pt-2 text-center "
+                        className=" kotak-nomor rounded  pt-2 text-center shadow"
                         style={{
                           width: "40px",
                           height: "40px",
@@ -1459,7 +1351,7 @@ function Dasboard() {
                       >
                         1
                       </h5>
-                      <h5 className="txt-judul text-center">Identitas Pemilik</h5>
+                      <h5 className="txt-on text-center">Identitas Pemilik</h5>
                     </div>
                   </div>
 
@@ -1468,7 +1360,7 @@ function Dasboard() {
                   <div className="steps2">
                     <div className="container">
                       <h5
-                        className=" kotak-nomor rounded  pt-2 text-center "
+                        className=" kotak-nomor rounded  pt-2 text-center shadow"
                         style={{
                           width: "40px",
                           height: "40px",
@@ -1490,7 +1382,7 @@ function Dasboard() {
                 <div className="steps3">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  pt-2 text-center "
+                      className=" kotak-nomor rounded  pt-2 text-center shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -1511,7 +1403,7 @@ function Dasboard() {
                 <div className="steps4">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  pt-2 text-center "
+                      className=" kotak-nomor rounded  pt-2 text-center shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -1532,7 +1424,7 @@ function Dasboard() {
                 <div className="steps5">
                   <div className="container">
                     <h5
-                      className=" kotak-nomor rounded  text-center pt-2 "
+                      className=" kotak-nomor rounded  text-center pt-2 shadow"
                       style={{
                         width: "40px",
                         height: "40px",
@@ -1556,7 +1448,7 @@ function Dasboard() {
                 style={{ marginTop: "50px" }}
               >
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh1">Nama Brand</label>
+                  <label for="contoh1">Nama Brand</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -1572,7 +1464,7 @@ function Dasboard() {
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh2">Nomor Sertifikat Halal</label>
+                  <label for="contoh2">Nomor Sertifikat Halal</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -1593,7 +1485,7 @@ function Dasboard() {
                 style={{ marginTop: "10px" }}
               >
                 <div class="form-group col-md-5 ">
-                  <label className="labelVS"for="contoh1">Foto Sertifikat HAKI</label>
+                  <label for="contoh1">Foto Sertifikat HAKI</label>
                   <sup className="required" style={{ color: "red" }}>
                     *
                   </sup>
@@ -1609,37 +1501,21 @@ function Dasboard() {
                   />
                 </div>
                 <div class="form-group col-md-5 ">
-                  {/* <label className="labelVS"for="contoh2">Nama Belakang</label>
+                  {/* <label for="contoh2">Nama Belakang</label>
                       <sup className="required" style={{ color: "red" }}>*</sup>
                       <input style={{ backgroundColor: "#F0F4FA"}} type="text" class="form-control" id="contoh2" placeholder="Nama Belakang Anda" value={namaBelakang} onChange={changeNamaBelakang} required /> */}
                 </div>
               </div>
 
               <div class="col-12 mt-4 d-flex justify-content-end pe-5">
-			  <button
-                  onClick={backFormStep5}
-                  class="btnBack btn  pt-2"
-                  style={{
-                    width: "100px",
-                    height: "44px",
-                    color:"#253863",
-					marginRight:"370px",
-					marginTop:"230px"
-					
-                  }}
-                  type="submit"
-                >
-                  Kembali
-                </button>
                 <button
-                  onClick={completeFormStepLast}
-                  class="btn text-light "
+                  onClick={completeFormStepVerif}
+                  class="btn text-light me-2"
                   style={{
                     width: "150px",
                     height: "44px",
                     backgroundColor: "#253863",
-                    marginTop: "230px",
-					marginRight:"-5px"
+                    marginTop: "195px",
                   }}
                   type="submit"
                 >
@@ -1653,7 +1529,7 @@ function Dasboard() {
                     height: "44px",
                     backgroundColor: "white",
                     borderColor: "red",
-                    marginTop: "230px",
+                    marginTop: "195px",
                   }}
                   type="submit"
                 >
@@ -1664,14 +1540,14 @@ function Dasboard() {
           )}
 
           {formStep === 6 && (
-            <section className="sec" style={{ marginLeft: "15px" }}>
+            <section className="tlk" style={{ marginLeft: "15px" }}>
               <div className="tabsss ms-4">
                 <h1
                   className="title-tolak"
                   style={{
                     color: "#3E4094",
                     fontSize: "26px",
-                    
+                    marginTop: "-40px",
                   }}
                 >
                   Form Penolakan Verifikasi
@@ -1696,7 +1572,7 @@ function Dasboard() {
                   </h4>
                   <p
                     className="anda-menolak"
-                    style={{ marginTop: "-120px", marginLeft: "10px" }}
+                    style={{ marginTop: "-130px", marginLeft: "10px" }}
                   >
                     Anda Menolak Verifikasi Seller
                   </p>{" "}
@@ -1708,7 +1584,7 @@ function Dasboard() {
                     marginTop: "-115px",
                     width: "700px",
                     marginLeft: "70px",
-                    fontSize: "14px",
+                    fontSize: "16px",
                   }}
                 >
                   Untuk kenyamanan calon Seller, anda diharuskan mengisi
@@ -1756,7 +1632,7 @@ function Dasboard() {
                     width: "150px",
                     height: "44px",
                     backgroundColor: "#253863",
-                    marginTop: "220px",
+                    marginTop: "145px",
                   }}
                   type="submit"
                 >
@@ -1770,7 +1646,7 @@ function Dasboard() {
                     height: "44px",
                     backgroundColor: "white",
                     borderColor: "red",
-                    marginTop: "220px",
+                    marginTop: "145px",
                   }}
                   type="submit"
                 >
@@ -1781,190 +1657,24 @@ function Dasboard() {
           )}
         </form>
       </Modal>
-			<div className="box-dasboard mt-3  ms-3 d-flex justify-content-between">
-				<div className="ds-kiri me-3 d-flex flex-column ">
-					<div className="ds-transaksi  d-flex justify-content-between">
-						<div className="ds-isi-transaksi bg-white d-flex flex-column  justify-content-center">
-							<span className="ds-label-transaksi mx-3 ">
-								Nominal Transaksi
-								<span className="ms-1">
-									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
-										<path
-											stroke="#BFBFDB"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="1.875"
-											d="M10 17.5a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15Z"
-										/>
-										<path
-											stroke="#BFBFDB"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="1.875"
-											d="M9.375 9.688H10v4.062h.625"
-										/>
-										<path fill="#BFBFDB" d="M9.844 7.813a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z" />
-									</svg>
-								</span>
-							</span>
-							<span className="label_jumlah_transaksi mx-3 mt-2"> Rp 50.000.000</span>
-						</div>
-						<div className="ds-isi-transaksi bg-white d-flex flex-column  justify-content-center">
-							<span className="ds-label-transaksi mx-3 ">
-								Total Transaksi
-								<span className="ms-1">
-									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
-										<path
-											stroke="#BFBFDB"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="1.875"
-											d="M10 17.5a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15Z"
-										/>
-										<path
-											stroke="#BFBFDB"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="1.875"
-											d="M9.375 9.688H10v4.062h.625"
-										/>
-										<path fill="#BFBFDB" d="M9.844 7.813a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z" />
-									</svg>
-								</span>
-							</span>
-							<span className="label_jumlah_transaksi mx-3 mt-1  "> 5555</span>
-							<span className="hint_box_transaksi mx-3"> Transaksi</span>
-						</div>
-					</div>
-					<div className="ds-user mt-4 d-flex justify-content-between">
-						<div className="ds-isi-user d-flex flex-column bg-white  justify-content-center">
-							<span className="ds-label-transaksi mx-3  ">Buyer Baru</span>
-							<span className="label_jumlah_transaksi mx-3 my-1  "> 666</span>
-							<span className="hint_box_transaksi mx-3"> User</span>
-						</div>
-						<div className="ds-isi-user d-flex flex-column bg-white  justify-content-center">
-							<span className="ds-label-transaksi mx-3">Seller Baru</span>
-							<span className="label_jumlah_transaksi mx-3 my-1  "> 777</span>
-							<span className="hint_box_transaksi mx-3"> User</span>
-						</div>
-						<div className="ds-isi-user d-flex flex-column bg-white  justify-content-center">
-							<span className="ds-label-transaksi mx-3  ">Menunggu Verifikasi</span>
-							<span className="label_jumlah_transaksi mx-3 my-1  "> 8888</span>
-							<span className="hint_box_transaksi mx-3"> User</span>
-						</div>
-					</div>
-					<div className="ds-tabel mt-3 bg-white d-flex flex-column">
-						<span className="ds-label-transaksi mb-2  mx-3 mt-3">Brand Terbaru</span>
-						<div className="p-2">
-							<Table className="ds-tabel-content ">
-								<thead className="ds-tabel-head ">
-									<tr>
-										<th>Nama Brand</th>
-										<th>Nama Pemilik</th>
-										<th>Status</th>
-										<th>Tanggal Registasi</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td className="ds-tabel-isi  py-3 ">Harli Dapitson</td>
-										<td className="ds-tabel-isi  py-3 ">Mang Donal Trum</td>
-										<td>
-											<span className="ds-status rounded p-1">Menunggu</span>
-										</td>
-										<td className="ds-tabel-isi py-3 ">Mang Donal Trum</td>
-										<td className="text-center">
-											<Button onClick={clickVerif} className="ds-btn-table p-0 px-3">Selengkapnya</Button>
-										</td>
-									</tr>
-									<tr>
-										<td className="ds-tabel-isi  py-3 ">Harli Dapitson</td>
-										<td className="ds-tabel-isi  py-3 ">Mang Donal Trum</td>
-										<td>
-											<span className="ds-status rounded p-1">Menunggu</span>
-										</td>
-										<td className="ds-tabel-isi py-3 ">Mang Donal Trum</td>
-										<td className="text-center">
-											<Button className="ds-btn-table p-0 px-3">Selengkapnya</Button>
-										</td>
-									</tr>
-									<tr>
-										<td className="ds-tabel-isi  py-3 ">Harli Dapitson</td>
-										<td className="ds-tabel-isi  py-3 ">Mang Donal Trum</td>
-										<td>
-											<span className="ds-status rounded p-1">Menunggu</span>
-										</td>
-										<td className="ds-tabel-isi py-3 ">Mang Donal Trum</td>
-										<td className="text-center">
-											<Button className="ds-btn-table p-0 px-3">Selengkapnya</Button>
-										</td>
-									</tr>
-									<tr>
-										<td className="ds-tabel-isi  py-3 ">Harli Dapitson</td>
-										<td className="ds-tabel-isi  py-3 ">Mang Donal Trum</td>
-										<td>
-											<span className="ds-status rounded p-1">Menunggu</span>
-										</td>
-										<td className="ds-tabel-isi py-3 ">Mang Donal Trum</td>
-										<td className="text-center">
-											<Button className="ds-btn-table p-0 px-3">Selengkapnya</Button>
-										</td>
-									</tr>
-								</tbody>
-							</Table>
-						</div>
-					</div>
-				</div>
-				<div className="ds-kanan d-flex flex-column">
-					<div className="ds-isi-kanan bg-white d-flex flex-column p-3 ">
-						<div className="ds-box-label-produk  d-flex justify-content-between mt-2 pb-2 px-1">
-							<span className="ds-label-produk">Produk Terlaris</span>
-						</div>
-						<div className="mt-3">
-							{ProdukTerlaris.map((el, i) => (
-								<ul className="d-flex ds-list-produk p-0 px-3 mb-2 " key={i}>
-									<li className="ds-img-produk me-3">
-										<img src={el.foto} alt="img-produk"/>
-									</li>
-									<li className="ds-box-nama-produk d-flex flex-column mt-2">
-										<span className="ds-nama-produk">{el.namaProduk}</span>
-										<span className="ds-jenis-produk">{el.jenis}</span>
-									</li>
-									<li className="ds-box-harga-produk d-flex flex-column mt-2">
-										<span className="ds-harga-produk">{el.harga}</span>
-										<span className="ds-terjual-produk">terjual</span>
-									</li>
-								</ul>
-							))}
-						</div>
-					</div>
-					{/* Bawah */}
-					<div className="ds-isi-kanan bg-white d-flex flex-column pe-3 ps-3 pt-3 mt-3">
-						<div className="ds-box-label-produk  d-flex justify-content-between mt-2 pb-2 px-1">
-							<span className="ds-label-produk">Brand Terlaris</span>
-						</div>
-						<div className="mt-3">
-							{ProdukTerlaris.map((el, i) => (
-								<ul className="d-flex ds-list-produk p-0 px-3 mb-2" key={i}>
-									<li className="ds-img-produk me-3">
-										<img src={el.foto} alt="img-produk"/>
-									</li>
-									<li className="ds-box-nama-produk d-flex flex-column mt-2">
-										<span className="ds-nama-produk">{el.namaProduk}</span>
-										<span className="ds-jenis-produk">{el.jenis}</span>
-									</li>
-									<li className="ds-box-harga-produk d-flex flex-column mt-2">
-										<span className="ds-harga-produk">{el.harga}</span>
-										<span className="ds-terjual-produk">Penjualan</span>
-									</li>
-								</ul>
-							))}
-						</div>
-					</div>
-				</div>
-			</div>
-		</Container>
-	);
+
+      {/* <div className="container">
+        <div className="content-tabs" >
+          <div>
+
+          
+            <div className="form-user shadow  mt-5 pb-5 container">
+            
+            
+              
+            </div>
+          </div>
+        </div>
+      </div> */}
+      <br />
+      <br />
+    </div>
+  );
 }
 
-export default Dasboard;
+export default VerifikasiSeller;
